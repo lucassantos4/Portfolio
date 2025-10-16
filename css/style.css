@@ -76,7 +76,7 @@ header{
     font: 400 150px var(--topicos);
     margin: 0rem 10rem 0rem 1rem ;
     color: var(--branco);
-    text-shadow: 6px 6px 15px var(--preto);
+    text-shadow: 4px 4px 19px var(--preto);
 }
 #aboutme{
     margin: 100px 0px 0px 20px;
@@ -93,14 +93,12 @@ header{
     margin: 40px 0px;
     width: 100%;
     border: solid 0.3rem var(--branco);
-    transition: all 0.5s ease;
     box-shadow: 1px 1px 10px var(--preto);
 }
 #hrbtcontain{
     width: 60%;
 }
 #socialmidiascontainer{
-    display: flex;
     justify-content: space-between;
     padding: 10px ;
     background-color: #00000070;
@@ -114,13 +112,21 @@ header{
     width: 100%;
     display: inline-flex;
     cursor: pointer;
-    justify-content: space-around ;
-    margin: 0px 0.5rem ;
+}
+#githublinkedinbutton{
+    display: flex;
+    margin-bottom: 10px ;
+}
+#githubbutton{
+    margin-right: 0.5rem;
+}
+#linkedinbutton{
+    margin-left: 0.5rem;
 }
 .socialmediasbutton{
     width: 100%;
     font: 400 16px arial;
-    padding: 20px;
+    padding: 10px;
     color: var(--branco);
     background-color: var(--preto);
     border: solid 1px var(--preto);
@@ -142,6 +148,10 @@ header{
     display: none;
     width: 400px;
 }
+#myprojects{
+    background-color: #fff;
+}
+
 @media screen and  (max-width: 1000px){
     header{
         font-size: 0.8em;
@@ -171,4 +181,4 @@ header{
         padding: 10px 8px;
         font-size: 0.7em;
     }
-}   
+}
