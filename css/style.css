@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Jacquard+24&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Pirata+One&family=Share+Tech+Mono&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --preto: #0f0f0f;
+    --verdeescuro: #385359;
+    --verdeclaro: #728A8C;
+    --cinza: #CCCCD9;
+    --branco: #f2f2f2;
+    --topicos: "BBH Sans Bogle" ;
+    --texto: "Share Tech Mono" ;
+    --nomes: "Pirata One" ;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    background:var(--preto);
+    color: var(--branco);
+    align-items: center;
+    padding: 10px 0px;
+    font: 400 1rem var(--topicos);
+    position: relative;
+}
+#navlist {
+    display: flex;
+    justify-content: center; 
+
+}
+.navlistitem{
+    margin: 1vh 3vh;
+    list-style-type: none;
+}
+
+#navlist a{
+    color: var(--branco);
+    text-decoration: none;
+    transition: all 0.5s ease;
+    
+}
+#navlist a:hover{
+    margin: 0px 10px;
+    color: var(--preto);
+    background-color: var(--branco);
+    border-radius: 2px;
+    
+}
+#hr{
+    color: var(--branco);
+    box-shadow: 2px 2px 5px var(--preto);
+}
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    background-image: linear-gradient(to bottom, #00000059 , #000),  url('../assets/bg.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+#about{
+    width: 70%;
+    margin: auto;
+    display: flex;
+}
+.nome{
+     pointer-events: none;
+    font: 400 150px var(--topicos);
+    margin: 0rem 10rem 0rem 1rem ;
+    color: var(--branco);
+    text-shadow: 6px 6px 15px var(--preto);
+}
+#aboutme{
+    margin: 100px 0px 0px 20px;
+}
+#aboutme p{
+    pointer-events: none;
+    padding: 0px 0px    20px 0px;
+    font: 400 20px var(--texto);
+    margin: 0rem 10rem 0rem 0.5rem ;
+    color: var(--branco);
+    text-shadow: 6px 6px 10px var(--preto);
+}
+.linh{
+    margin: 40px 0px;
+    width: 100%;
+    border: solid 0.3rem var(--branco);
+    transition: all 0.5s ease;
+    box-shadow: 1px 1px 10px var(--preto);
+}
+#hrbtcontain{
+    width: 60%;
+
+}
+#socialmidiascontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px ;
+    background-color: #00000070;
+    box-shadow: 1px 1px 5px var(--preto);
+}
+.socialmidias:link{
+    text-decoration: none;
+    justify-content: space-around;
+}
+.socialmidias{
+    width: 100%;
+    display: inline-flex;
+    cursor: pointer;
+    justify-content: space-around ;
+    margin: 0px 0.5rem ;
+}
+.socialmediasbutton{
+    width: 100%;
+    font: 400 16px arial;
+    padding: 20px;
+    color: var(--branco);
+    background-color: var(--preto);
+    border: solid 1px var(--preto);
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+.socialmediasbutton:hover{
+    color: #000;
+    background-color: var(--branco) ;
+}
+#chibiimage{
+    margin: 0px 10px ;
+    box-shadow: 1px 5px 10px #0000009c;
+    background-color : var(--cinza);
+    border-radius: 100%;
+}
+#chibiimage img{
+    display: none;
+    width: 400px;
+}
