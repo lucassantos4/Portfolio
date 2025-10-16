@@ -65,7 +65,6 @@ header{
     background-image: linear-gradient(to bottom, #00000059 , #000),  url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
 }
 #about{
     width: 70%;
@@ -73,7 +72,7 @@ header{
     display: flex;
 }
 .nome{
-     pointer-events: none;
+    pointer-events: none;
     font: 400 150px var(--topicos);
     margin: 0rem 10rem 0rem 1rem ;
     color: var(--branco);
@@ -84,7 +83,7 @@ header{
 }
 #aboutme p{
     pointer-events: none;
-    padding: 0px 0px    20px 0px;
+    padding: 0px 0px  20px 0px;
     font: 400 20px var(--texto);
     margin: 0rem 10rem 0rem 0.5rem ;
     color: var(--branco);
@@ -99,7 +98,6 @@ header{
 }
 #hrbtcontain{
     width: 60%;
-
 }
 #socialmidiascontainer{
     display: flex;
@@ -144,3 +142,33 @@ header{
     display: none;
     width: 400px;
 }
+@media screen and  (max-width: 1000px){
+    header{
+        font-size: 0.8em;
+    }
+    .navlistitem{
+        margin: 1vh 0.4em;
+    }
+    #about{
+    width: 100%;
+    margin: auto;
+    display: flex;
+}
+    #aboutme{
+        display: flexbox;
+        margin: auto;
+        margin: 0em 0em 0em 1em;
+    }
+    .nome{
+        font-size: 8em;
+        margin: auto;
+    }
+    #about p{
+        padding: 0px;
+        font-size: 1em;
+    }
+    .socialmediasbutton{
+        padding: 10px 8px;
+        font-size: 0.7em;
+    }
+}   
