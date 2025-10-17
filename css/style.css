@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Jacquard+24&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Pirata+One&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 *{
     padding: 0px;
     margin: 0px;
 }
 
 :root{
+    --preto-degrade: #0f0f0f8f ;
     --preto: #0f0f0f;
     --verdeescuro: #385359;
     --verdeclaro: #728A8C;
     --cinza: #CCCCD9;
     --branco: #f2f2f2;
     --topicos: "BBH Sans Bogle" ;
-    --texto: "Share Tech Mono" ;
-    --nomes: "Pirata One" ;
+    --texto: "Open Sans" ;
 }
 html{
     scroll-behavior: smooth;
+}
+main{
+    background-color: var(--preto);
 }
 header{
     display: flex;
@@ -42,7 +45,7 @@ header{
 #navlist a{
     color: var(--branco);
     text-decoration: none;
-    transition: all 0.5s ease;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
     
 }
 #navlist a:hover{
@@ -53,18 +56,21 @@ header{
     
 }
 #hr{
+    width: 100%;
     color: var(--branco);
     box-shadow: 2px 2px 5px var(--preto);
 }
 
 .bg{
+    overflow: hidden;
     width: 100%;
     height: 100vh;
     display: flex;
     margin: auto;
-    background-image: linear-gradient(to bottom, #00000059 , #000),  url('../assets/bg.jpg') ;
+    background-image: linear-gradient(to bottom, var(--preto-degrade) , var(--preto)),  url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
+    ;
 }
 #about{
     width: 70%;
@@ -149,29 +155,69 @@ header{
     width: 400px;
 }
 #myprojects{
-    background-color: #fff;
+    margin-top: 200px;
+    padding: 10px 0px 110px 0px;
+    background-color: var(--preto);
+    height: fit-content;
 }
-
+#myprojects > h1 {
+    text-align: center;
+    font: 400 40px var(--topicos);
+    color: var(--branco);
+}
+#myprojects > h2{
+    padding: 20px;
+    text-align: center;
+    font: 400 20px var(--texto);
+    color: var(--branco);
+}
+#projetoscontainer{
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+.projetos{
+    width: 80%;
+    background-color: var(--verdeclaro);
+    padding: 20px;
+    margin: 20px;
+    transition: all 0.8s ease;
+    cursor: none;
+}
+.projetos:hover{
+    background-color: var(--verdeescuro);
+    width: 100%;
+    transform: scale(1.16)   
+}
+.projetostittle{
+    margin: 5px 0px;
+    font: 400 20px var(--topicos);
+    color: var(--preto);
+}
+.projetosdesc{
+    font: 300 16px var(--texto);
+    color: var(--branco);
+    
+}
+.projetosimage{
+    filter: drop-shadow( 1px 1px 3px var(--preto-degrade) );
+    border-radius: 2px;
+    width: 100%;
+}
 @media screen and  (max-width: 1000px){
     header{
         font-size: 0.8em;
     }
     .navlistitem{
-        margin: 1vh 0.4em;
+        margin: 1vh 0.8em;
     }
     #about{
-    width: 100%;
-    margin: auto;
-    display: flex;
-}
-    #aboutme{
-        display: flexbox;
-        margin: auto;
-        margin: 0em 0em 0em 1em;
+        display: flex;
+        width: 100%;
+        margin: 0px auto;
     }
     .nome{
         font-size: 8em;
-        margin: auto;
     }
     #about p{
         padding: 0px;
@@ -180,5 +226,28 @@ header{
     .socialmediasbutton{
         padding: 10px 8px;
         font-size: 0.7em;
+    }
+    #projetoscontainer{
+        display: inline;
+    }
+    .projetos{
+        width: 50%;
+        justify-content: center;
+        margin: 20px auto;
+    }
+    .projetos:hover{
+    background-color: var(--verdeescuro);
+    width: 70%;
+    transform: scale(1.02)   
+    }
+    .projetostittle{
+        margin: 5px 0px;
+        font: 400 16px var(--topicos);
+        color: var(--preto);
+    }
+    .projetosdesc{
+        font: 300 13px var(--texto);
+        color: var(--branco);
+        
     }
 }
