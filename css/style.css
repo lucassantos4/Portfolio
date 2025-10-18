@@ -156,7 +156,7 @@ header{
 }
 #myprojects{
     margin-top: 200px;
-    padding: 10px 0px 110px 0px;
+    padding: 10px 0px 150px 0px;
     background-color: var(--preto);
     height: fit-content;
 }
@@ -207,27 +207,52 @@ header{
     width: 100%;
 }
 #about{
+    background-color: var(--branco);
+    border: solid var(--verdeescuro);
+    border-right: 4px;
+    border-left: 4px;
     
 }
 #aboutcontainer{
-    background-color: var(--branco);
     display: flex;
-    padding: 100px;
+    width: 80%;
+    margin:  auto;
+    padding: 5vh 20px 0px 20px;
 }
-
+#quemsou{
+    width: 50%;
+    margin: auto;
+}
 #quemsou > h1{
     font: 400 60px var(--topicos);
     color: var(--preto);
 }
+
 #quemsou h2{
     font: 400 35px var(--topicos);
     color: var(--preto);
     margin: 0px 10px;
 }
 #quemsou p{
-    font: 400 16px var(--texto);
-    margin: 0px 60% 0px 10px;
+    font: 400 1em var(--texto);
+    margin: 0px 10px 0px 10px;
 }
+#fotopessoalcontainer{
+
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: var(--verdeclaro);
+    border-radius: 50%;
+    height: cover;
+    
+    
+}
+#fotopessoal{
+    height: cover;
+    width: 100%;
+}
+
 @media screen and  (max-width: 1000px){
     header{
         font-size: 0.8em;
@@ -251,6 +276,7 @@ header{
         padding: 10px 8px;
         font-size: 0.7em;
     }
+
     #projetoscontainer{
         display: inline;
     }
@@ -273,5 +299,35 @@ header{
         font: 300 13px var(--texto);
         color: var(--branco);
         
+    }
+    #aboutcontainer{
+        background-color: var(--branco);
+        display: grid;
+        width: 80%;
+        margin: auto;
+        padding: 10vh 0px;
+    }
+    #fotopessoalcontainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+    #quemsou{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    #quemsou > h1{
+        font: 400 60px var(--topicos);
+        color: var(--preto);
+    }
+    #quemsou h2{
+        font: 400 35px var(--topicos);
+        color: var(--preto);
+        margin: 0px 10px;
+    }
+    #quemsou p{
+        font: 400 14px var(--texto);
+        margin: 0px 0% 0px 10px;
     }
 }
