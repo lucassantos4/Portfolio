@@ -20,15 +20,15 @@
         <nav>
             <ul id="navlist">
 
-                <a href="#about">
-                    <li class="navlistitem" id="navlistitem1">
-                        Sobre Mim
-                    </li>
-                </a>
-
                 <a href="#myprojects">
                     <li class="navlistitem" id="navlistitem2">
                         Meus Projetos
+                    </li>
+                </a>
+
+                <a href="#about">
+                    <li class="navlistitem" id="navlistitem1">
+                        Sobre Mim
                     </li>
                 </a>
 
@@ -57,7 +57,7 @@
                     <div id="hrbtcontain">
                         <hr class="linh">
                         <div id="socialmidiascontainer">
-                            <div id="githublinkedinbutton">
+                            <div id="externallinkbutton">
                                 <a href="https://github.com/lucassantos4" target="_blank" class="socialmidias">
                                     <button id="githubbutton" class="socialmediasbutton">
                                         <i class="bi bi-github"></i>
@@ -70,19 +70,24 @@
                                         <i class="bi bi-linkedin"></i>
                                         linkedin
                                     </button>
+
+                                </a>
+
+                            </div>
+                            <div id="pagelinkbutton">
+
+                                <a href="#contact" class="socialmidias">
+                                    <button class="socialmediasbutton" id="contactbutton">
+                                        VAMOS CONVERSAR
+                                    </button>
                                 </a>
                             </div>
-                            <a href="#contact" class="socialmidias">
-                                <button class="socialmediasbutton" id="contactbutton">
-                                    VAMOS CONVERSAR
-                                </button>
-                            </a>
                         </div>
                     </div>
                 </article>
                 <section id="aboutmeimage">
-                    <div id="chibiimage">
-                        <img src="assets/lucaschibi.png" alt="Lucas.dev Chibi">
+                    <div id="image">
+
                     </div>
                 </section>
             </section>
@@ -140,27 +145,120 @@
                 <article id="quemsou">
                     <h1>Sobre mim</h1>
                     <h2>Quem eu sou</h2>
-                    <p><strong>Lucas Santos</strong>, estudante de Ciência da Computação com experiência em projetos acadêmicos
+                    <p><strong>Lucas Santos</strong>, estudante de Ciência da Computação com experiência em projetos
+                        acadêmicos
                         aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas próximas ao
                         mercado. Atualmente, concentro meus estudos em JavaScript e tecnologias de desenvolvimento web,
                         buscando aprimorar meu conhecimento técnico e contribuir de forma efetiva em projetos.</p>
-                        <a href="#contact" class="socialmidias">
-                                <button class="socialmediasbutton" id="contactbutton" style="width: 50%; margin-top: 40px;">
-                                    VAMOS CONVERSAR
-                                </button>
-                            </a>
+                    <a href="#contact" class="socialmidias">
+                        <button class="socialmediasbutton" id="contactbutton" style="width: 50%; margin: 20px 0px;">
+                            VAMOS CONVERSAR
+                        </button>
+                    </a>
                 </article>
                 <article id="fotopessoalcontainer">
                     <img src="assets/fotopessoal.png" alt="foto pessoal" id="fotopessoal">
                 </article>
-            </div>    
+            </div>
         </section>
-        
-        <section style="height: 50vh; width: 100%;">
+
+        <section id="skills">
+
+            <article id="skillsbox">
+                <h1 class="skillsh1">Minhas Skills</h1>
+                <div id="skillscontainer" class="skillscontainer">
+                    <div id="html" class="myskills">
+                        <h1>
+                            HTML
+                        </h1>
+                        <img src="assets/skills/HTML5.png" alt="" class="skillsimage">
+                    </div>
+                    <div id="css" class="myskills">
+                        <h1>
+                            CSS
+                        </h1>
+                        <img src="assets/skills/CSS3.png" alt="" class="skillsimage">
+                    </div>
+                    <div id="JavaScript" class="myskills">
+                        <h1>
+                            JAVASCRIPT
+                        </h1>
+                        <img src="assets/skills/JAVASCRIPT.png" alt="" class="skillsimage">
+                    </div>
+                    <div id="JavaScript" class="myskills">
+                        <h1>
+                            Figma
+                        </h1>
+                        <img src="assets/skills/FIGMA.png" alt="" class="skillsimage">
+                    </div>
+                    <div id="JavaScript" class="myskills">
+                        <h1>
+                            Git
+                        </h1>
+                        <img src="assets/skills/GIT.png" alt="" class="skillsimage">
+                    </div>
+                </div>
+                <article id="porcentagem">
+                    <div id="skillsporcentagem">
+                        <h1>HTML</h1>
+                        <div class="porcentagembar">
+                            <div id="porcentagembar-html">
+                                <h1>90%</h1>
+                            </div>
+                        </div>
+                        <h1>CSS</h1>
+                        <div class="porcentagembar">
+                            <div id="porcentagembar-css">
+                                <h1>75%</h1>
+                            </div>
+                        </div>
+                        <h1>JAVASCRIPT</h1>
+                        <div class="porcentagembar">
+                            <div id="porcentagembar-javascript">
+                                <h1>60%</h1>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </article>
+
+        </section>
+        <section id="contact">
+            <article id="mapscontainer">
+                <h1>
+                    ME ENCONTRE AQUI
+                </h1>
+                <div id="mapslocalizacoo">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d250651.8312031578!2d-37.26620613971783!3d-11.005963427860301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab04015be27cd%3A0x804434fd92ec3b36!2sAracaju%2C%20SE!5e0!3m2!1spt-BR!2sbr!4v1761160412444!5m2!1spt-BR!2sbr"
+                        width="630" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </article>
+            <article id="formulariodecontato">
+                <h1>
+                    Fale comigo
+                </h1>
+                <h2>Me envie uma mensagem para que eu possa entrar em contato contigo</h2>
+                <div id="formscontato">
+                    <form action="https://formsubmit.co/lucasnsntcontato@outlook.com" method="POST">
+                        <input type="text" name="name" placeholder="Escreva seu nome" required>
+                        <input type="email" name="email" placeholder="Escreva seu email" required>
+                        <textarea name="message" placeholder="Deixe aqui sua mensagem e o motivo do contato"></textarea>
+                        <input type="hidden" name="_captcha" value="false">
+                        <button type="submit" id="contactformbutton">ENVIAR MENSAGEM</button>
+                        <input type="hidden" name="_next" value="https://lucassantos4.github.io/Portfolio/#contact">
+                    </form>
+                </div>
+            </article>
+
         </section>
     </main>
-
     <footer>
+        <h1>
+            Lucas Rocha Santos &copy; 2025 | TODOS OS DIREITOS RESERVADOS
+        </h1>
 
     </footer>
 </body>

@@ -5,18 +5,26 @@
 }
 
 :root{
-    --preto-degrade: #0f0f0f8f ;
+    --preto-degrade: #0f0f0f65 ;
     --preto: #0f0f0f;
     --verdeescuro: #385359;
     --verdeclaro: #728A8C;
     --cinza: #CCCCD9;
     --branco: #f2f2f2;
-    --topicos: "BBH Sans Bogle" ;
-    --texto: "Open Sans" ;
+    --branco-degrade: #f2f2f291;
+    --topicos: "BBH Sans Bogle" , Arial, Helvetica, sans-serif ;
+    --texto: "Open Sans" , Arial, Helvetica, sans-serif ;
 }
 html{
     scroll-behavior: smooth;
 }
+body{
+    background-color: var(--preto);
+}
+h1 , p , h2{
+    pointer-events: none;
+}
+
 main{
     background-color: var(--preto);
 }
@@ -56,26 +64,24 @@ header{
     
 }
 #hr{
-    width: 100%;
     color: var(--branco);
     box-shadow: 2px 2px 5px var(--preto);
 }
 
 .bg{
-    overflow: hidden;
+    
     width: 100%;
     height: 100vh;
     display: flex;
-    margin: auto;
     background-image: linear-gradient(to bottom, var(--preto-degrade) , var(--preto)),  url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
-    ;
 }
 #landingpage{
-    width: 70%;
-    margin: auto;
     display: flex;
+    width: 100%;
+   
+  
 }
 .nome{
     pointer-events: none;
@@ -85,17 +91,18 @@ header{
     text-shadow: 4px 4px 19px var(--preto);
 }
 #aboutme{
-    margin: 100px 0px 0px 20px;
+    margin: auto 15%;
+    width: fit-content;
 }
 #aboutme p{
     pointer-events: none;
     padding: 0px 0px  20px 0px;
     font: 400 20px var(--texto);
-    margin: 0rem 10rem 0rem 0.5rem ;
     color: var(--branco);
     text-shadow: 6px 6px 10px var(--preto);
 }
 .linh{
+    
     margin: 40px 0px;
     width: 100%;
     border: solid 0.3rem var(--branco);
@@ -105,21 +112,23 @@ header{
     width: 60%;
 }
 #socialmidiascontainer{
-    justify-content: space-between;
+    width: 100%;
     padding: 10px ;
     background-color: #00000070;
     box-shadow: 1px 1px 5px var(--preto);
 }
 .socialmidias:link{
+
     text-decoration: none;
     justify-content: space-around;
 }
 .socialmidias{
+    display: flex;
     width: 100%;
-    display: inline-flex;
     cursor: pointer;
+    margin: auto;
 }
-#githublinkedinbutton{
+#externallinkbutton{
     display: flex;
     margin-bottom: 10px ;
 }
@@ -144,19 +153,9 @@ header{
     color: #000;
     background-color: var(--branco) ;
 }
-#chibiimage{
-    margin: 0px 10px ;
-    box-shadow: 1px 5px 10px #0000009c;
-    background-color : var(--cinza);
-    border-radius: 100%;
-}
-#chibiimage img{
-    display: none;
-    width: 400px;
-}
 #myprojects{
     margin-top: 200px;
-    padding: 10px 0px 150px 0px;
+    padding: 10px 0px 100px 0px;
     background-color: var(--preto);
     height: fit-content;
 }
@@ -172,6 +171,7 @@ header{
     color: var(--branco);
 }
 #projetoscontainer{
+
     display: flex;
     margin: auto;
     width: 80%;
@@ -181,15 +181,14 @@ header{
     background-color: var(--verdeclaro);
     padding: 20px;
     margin: 20px;
-    transition: all 0.8s ease;
+    transition: all 0.6s ease;
     cursor: none;
     height: fit-content;
 }
 
 .projetos:hover{
     background-color: var(--verdeescuro);
-    width: 100%;
-    transform: scale(1.16)   
+    transform: scale(1.1);
 }
 .projetostittle{
     margin: 5px 0px;
@@ -197,6 +196,7 @@ header{
     color: var(--preto);
 }
 .projetosdesc{
+    
     font: 300 16px var(--texto);
     color: var(--branco);
     
@@ -208,20 +208,24 @@ header{
 }
 #about{
     background-color: var(--branco);
-    border: solid var(--verdeescuro);
+    border: solid var(--verdeclaro);
     border-right: 4px;
     border-left: 4px;
+    align-items: center;
+
     
 }
 #aboutcontainer{
     display: flex;
-    width: 80%;
     margin:  auto;
+    width: 80%;
     padding: 5vh 20px 0px 20px;
 }
 #quemsou{
+    display: inline;
     width: 50%;
-    margin: auto;
+    
+    margin:auto ;
 }
 #quemsou > h1{
     font: 400 60px var(--topicos);
@@ -234,11 +238,11 @@ header{
     margin: 0px 10px;
 }
 #quemsou p{
+    
     font: 400 1em var(--texto);
-    margin: 0px 10px 0px 10px;
+    margin: 0px 10px 10px 10px;
 }
 #fotopessoalcontainer{
-
     display: flex;
     margin: auto;
     align-items: center;
@@ -249,8 +253,201 @@ header{
     
 }
 #fotopessoal{
+    pointer-events: none;
     height: cover;
     width: 100%;
+}
+#skills{
+    padding: 100px 0px;
+    
+}
+#skillsbox > h1{
+    margin:auto 0px ;
+    font: 400 50px var(--topicos);
+    padding: 0px;
+    width: 14%;
+}
+
+#skillsbox{
+    display: flex;
+    margin: 0px auto;
+    background-color: var(--branco);
+    width: 80%;
+    padding: 20px;
+    
+}
+#skillscontainer{
+    width: 40%;
+    display: grid;
+    padding: 10px 15px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax( 141px, 1fr));
+    height: fit-content;
+}
+.myskills{
+    background-color: var(--preto-degrade);
+    text-align: center;
+    margin: 10px auto;
+    width: 100px;
+    height: fit-content;
+    font: 400 70% var(--topicos);
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 5px var(--preto-degrade);
+    color: #000;  
+    padding: 10px;
+}
+.myskills img{
+    margin: auto;
+    display: flex;
+    width: 100%;
+}
+.myskills:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 2px 8px var(--preto-degrade);
+}
+#porcentagem{
+    display: flex;
+    width: 50%;
+}
+#skillsporcentagem{
+    font: 400 10px var(--topicos);
+    margin: auto;
+    width: 100%;
+    align-items: center;
+    text-align: justify;
+}
+.porcentagembar{
+    border-radius: 10px;
+    font: 400 0.8em var(--texto);
+    text-indent: 10px;
+    display: flex;
+    margin: auto;
+    background-color: var(--preto-degrade);
+    width: 100%;
+    margin: 10px 0px ;
+}
+#porcentagembar-html{
+    padding-right: 1%   ;
+    width: 90%;
+    border-radius: 35px;
+    background-color: var(--verdeclaro);
+    text-align: end;
+}
+#porcentagembar-css{
+    padding-right: 1%   ;
+    width: 75%;
+    border-radius: 35px;
+    background-color: var(--verdeclaro);
+    text-align: end;
+}#porcentagembar-javascript{
+    padding-right: 1%   ;
+    width: 60%;
+    border-radius: 35px;
+    background-color: var(--verdeclaro);
+    text-align: end;
+}
+#contact{
+    background-color: var(--preto);
+    margin: 100px 0px;
+    display: flex;
+    
+ 
+}
+#mapslocalizacao{
+    display: flex;
+    margin: auto;
+}
+#mapscontainer h1{
+    padding: 5px 0px;
+}
+#mapscontainer{
+    background-color: var(--branco);
+    text-align: center;
+    color: var(--preto);
+    font: 400 20px var(--topicos);
+    margin: auto;
+    width: 30%;
+    border: solid 4px var(--verdeclaro);
+    border-radius: 5px;
+
+}
+iframe{
+    width: 100%;
+   
+}
+#formulariodecontato{
+    background-color: var(--branco) ;
+    margin: 0px auto;
+    width:  30%;
+    padding: 20px;
+    border: solid 4px var(--verdeclaro);
+    border-radius: 5px;
+
+}
+#formulariodecontato h1{
+        font: 400 40px var(--topicos);
+}
+#formulariodecontato h2{
+        font: 400 20px var(--texto);
+}
+input{
+    font: 400 12px var(--texto);
+    padding: 5px;
+    margin: 20px 0px;
+    width: 100%;
+    display: flex;
+    border: solid 1px var(--preto);
+    text-indent: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px var(--preto-degrade);
+    transition: all 1s  ;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border: solid 2px var(--verdeescuro);
+    box-shadow: 2px 2px 5px var(--preto-degrade);
+}
+input:hover, textarea:hover{
+    outline: none;
+    border: solid 2px var(--verdeescuro);
+    box-shadow: 2px 2px 5px var(--preto-degrade);
+}
+textarea{
+    font: 400 12px var(--texto);
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-indent: 5px;
+    padding: 5px;
+    border: solid 1px var(--preto);
+    resize: vertical;
+    box-shadow: 2px 2px 2px var(--preto-degrade);
+    min-height: 6rem;
+ 
+}
+#contactformbutton{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px;
+    border: solid 1px var(--preto);
+    color: var(--branco);
+    background-color: var(--preto);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+#contactformbutton:hover{
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+footer{
+    
+    background-color: var(--branco);
+    color: var(--preto);
+    font: 600 10px var(--texto);
+    text-align: center;
+    padding: 20px;
 }
 
 @media screen and  (max-width: 1000px){
@@ -260,23 +457,38 @@ header{
     .navlistitem{
         margin: 1vh 0.8em;
     }
-    #landingpage{
-        display: flex;
+    .bg{
+        display: block;
         width: 100%;
-        margin: 0px auto;
+        overflow: hidden;
+
+    }
+    #landingpage{
+        width: 100%;
+    }
+    #aboutme{
+        width: 100%;
+        margin-top: 10%;
     }
     .nome{
-        font-size: 8em;
-    }
-    #about p{
+        margin: 0px;
         padding: 0px;
-        font-size: 1em;
+        font-size: 5.8em;
+    }
+    #aboutme p{
+        padding: 0px;
+        font-size: 0.7em;
+    }
+    #socialmidiascontainer{
+        width: 100%;
     }
     .socialmediasbutton{
         padding: 10px 8px;
         font-size: 0.7em;
     }
-
+    #myprojects{
+        margin-top: 0px;
+    }
     #projetoscontainer{
         display: inline;
     }
@@ -330,4 +542,53 @@ header{
         font: 400 14px var(--texto);
         margin: 0px 0% 0px 10px;
     }
+    #skillsbox > h1{
+        width: 100%;
+        text-align: center;
+        font: 400 1.5em var(--topicos);
+    }
+    #skillsbox{
+        display: grid;
+    }
+    #skillscontainer{
+        grid-template-columns: repeat(auto-fit, minmax( 55px, 1fr));
+    }
+    .myskills{
+        display: flex;
+        margin: 5px auto;
+        padding: 5px;
+        width: 40px;
+        font: 400 0em var(--topicos); 
+    }
+    #porcentagem{
+        width: 100%;
+    }
+    .porcentagembar{
+        width: 100%;
+        font: 400 7px var(--texto);
+        text-align: justify;
+    }
+    #mapscontainer{
+        width: 90%;
+        height: fit-content;
+        font-size: 15px;
+        margin: 50px auto;
+    }
+    iframe{
+        height: 200px;
+    }
+    #contact{
+        display: inline;
+    }
+    #formulariodecontato{
+        margin: 20px auto;
+        width: 80%;
+    }
+    #formulariodecontato h1{
+        font: 400 20px var(--topicos);
+    }
+    #formulariodecontato h2{
+        font: 400 12px var(--texto);
+    }
+    
 }
