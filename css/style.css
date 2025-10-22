@@ -445,9 +445,10 @@ footer{
     
     background-color: var(--branco);
     color: var(--preto);
-    font: 600 10px var(--texto);
+    font: 600 7px var(--texto);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 @media screen and  (max-width: 1000px){
@@ -589,6 +590,11 @@ footer{
     }
     #formulariodecontato h2{
         font: 400 12px var(--texto);
+    }
+    footer{
+        margin-top: 30px;
+        font-size: 5px;
+        padding: 8px    ;
     }
     
 }
