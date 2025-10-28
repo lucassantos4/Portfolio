@@ -15,11 +15,32 @@
     --topicos: "BBH Sans Bogle" , Arial, Helvetica, sans-serif ;
     --texto: "Open Sans" , Arial, Helvetica, sans-serif ;
 }
+.circle{
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+}
+canvas{ 
+  display: block;
+}
+#particles-container{ 
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: 100% 100%;
+  z-index: -1;
+  pointer-events: auto;
+}
 html{
     scroll-behavior: smooth;
-}
-body{
-    background-color: var(--preto);
 }
 h1 , p , h2{
     pointer-events: none;
@@ -27,24 +48,51 @@ h1 , p , h2{
 
 main{
     background-color: var(--preto);
+    color: var(--branco);
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+    padding-bottom:30px ;
 }
 header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     height: auto;
     background:var(--preto);
     color: var(--branco);
-    align-items: center;
     padding: 10px 0px;
     font: 400 1rem var(--topicos);
     position: relative;
 }
-#navlist {
+#light-mode-button{
     display: flex;
-    justify-content: center; 
+    margin-left: 10%;
+    border: none;
+    background-color: transparent;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+    padding: 2px;
+    display: flex;
+    height: fit-content;
+}
+nav{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+#light-mode-buttonimg{
+    width: 30px;
+    height: auto;
+}
+#light-mode-button:hover{
+    cursor: pointer;
 
 }
+#navlist {
+    display: flex;
+    margin: auto;
+}   
 .navlistitem{
     margin: 1vh 3vh;
     list-style-type: none;
@@ -63,25 +111,26 @@ header{
     border-radius: 2px;
     
 }
+
 #hr{
     color: var(--branco);
     box-shadow: 2px 2px 5px var(--preto);
 }
 
 .bg{
-    
     width: 100%;
     height: 100vh;
     display: flex;
     background-image: linear-gradient(to bottom, var(--preto-degrade) , var(--preto)),  url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 1px 1px 5px #0000007e;
+    cursor: default;
 }
 #landingpage{
     display: flex;
     width: 100%;
    
-  
 }
 .nome{
     pointer-events: none;
@@ -116,6 +165,7 @@ header{
     padding: 10px ;
     background-color: #00000070;
     box-shadow: 1px 1px 5px var(--preto);
+    pointer-events: all;
 }
 .socialmidias:link{
 
@@ -156,34 +206,34 @@ header{
 #myprojects{
     margin-top: 200px;
     padding: 10px 0px 100px 0px;
-    background-color: var(--preto);
     height: fit-content;
+    color: var(--branco);
 }
 #myprojects > h1 {
     text-align: center;
     font: 400 40px var(--topicos);
-    color: var(--branco);
 }
 #myprojects > h2{
     padding: 20px;
     text-align: center;
-    font: 400 20px var(--texto);
-    color: var(--branco);
+    font: 400 20px var(--texto); 
 }
 #projetoscontainer{
-
     display: flex;
     margin: auto;
     width: 80%;
+    
 }
 .projetos{
     width: 80%;
     background-color: var(--verdeclaro);
+    pointer-events: all;
     padding: 20px;
     margin: 20px;
     transition: all 0.6s ease;
     cursor: none;
     height: fit-content;
+    z-index: 2;
 }
 
 .projetos:hover{
@@ -192,12 +242,11 @@ header{
 }
 .projetostittle{
     margin: 5px 0px;
-    font: 400 20px var(--topicos);
     color: var(--preto);
+    font: 400 20px var(--topicos);
 }
 .projetosdesc{
     font: 300 16px var(--texto);
-    color: var(--branco); 
 }
 .projetosimage{
     filter: drop-shadow( 1px 1px 3px var(--preto-degrade) );
@@ -210,6 +259,8 @@ header{
     border-right: 4px;
     border-left: 4px;
     align-items: center;
+    box-shadow: 1px 1px 5px #0000007e;
+    pointer-events: all;
 
     
 }
@@ -220,23 +271,20 @@ header{
     padding: 5vh 20px 0px 20px;
 }
 #quemsou{
+    color: var(--preto);
     display: inline;
     width: 50%;
-    
     margin:auto ;
 }
 #quemsou > h1{
     font: 400 60px var(--topicos);
-    color: var(--preto);
 }
 
 #quemsou h2{
     font: 400 35px var(--topicos);
-    color: var(--preto);
     margin: 0px 10px;
 }
 #quemsou p{
-    
     font: 400 1em var(--texto);
     margin: 0px 10px 10px 10px;
 }
@@ -246,13 +294,10 @@ header{
     align-items: center;
     background-color: var(--verdeclaro);
     border-radius: 50%;
-    height: cover;
-    
-    
 }
 #fotopessoal{
     pointer-events: none;
-    height: cover;
+    height: 100%;
     width: 100%;
 }
 #skills{
@@ -260,44 +305,41 @@ header{
     
 }
 #skillsbox > h1{
-    margin:auto 0px ;
+    text-align: center;
     font: 400 50px var(--topicos);
     padding: 0px;
-    width: 14%;
+    
 }
 
 #skillsbox{
-    display: flex;
     margin: 0px auto;
-    background-color: var(--branco);
-    width: 80%;
+    color: var(--branco);
+    width: fit-content;
     padding: 20px;
-    
 }
 #skillscontainer{
-    width: 40%;
-    display: grid;
+    width: fit-content;
+    display: flex;
     padding: 10px 15px;
     margin: auto;
-    grid-template-columns: repeat(auto-fit, minmax( 141px, 1fr));
     height: fit-content;
 }
 .myskills{
-    background-color: var(--preto-degrade);
+    background-color: var(--branco-degrade);
     text-align: center;
-    margin: 10px auto;
-    width: 100px;
+    margin: 10px;
+    width: 95px;
     height: fit-content;
-    font: 400 70% var(--topicos);
+    font: 400 11px var(--topicos);
     transition: all 0.5s ease;
     box-shadow: 2px 2px 5px var(--preto-degrade);
-    color: #000;  
+    pointer-events: all;
     padding: 10px;
 }
 .myskills img{
     margin: auto;
     display: flex;
-    width: 100%;
+    width: 80%;
 }
 .myskills:hover{
     transform: scale(1.2);
@@ -305,7 +347,8 @@ header{
 }
 #porcentagem{
     display: flex;
-    width: 50%;
+    width: 100%;
+    margin: auto;
 }
 #skillsporcentagem{
     font: 400 10px var(--topicos);
@@ -345,15 +388,17 @@ header{
     text-align: end;
 }
 #contact{
-    background-color: var(--preto);
+  
     margin: 100px 0px;
     display: flex;
+    
     
  
 }
 #mapslocalizacao{
     display: flex;
     margin: auto;
+
 }
 #mapscontainer h1{
     padding: 5px 0px;
@@ -367,6 +412,7 @@ header{
     width: 30%;
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
+    pointer-events: all;
 
 }
 iframe{
@@ -375,11 +421,13 @@ iframe{
 }
 #formulariodecontato{
     background-color: var(--branco) ;
+    color: var(--preto);
     margin: 0px auto;
     width:  30%;
     padding: 20px;
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
+    pointer-events: all;
 
 }
 #formulariodecontato h1{
@@ -449,9 +497,8 @@ footer{
     font: 600 7px var(--texto);
     text-align: center;
     padding: 10px;
-    margin-top: 30px;
+    z-index: 2;
 }
-
 @media screen and  (max-width: 1000px){
     header{
         font-size: 0.8em;
@@ -515,7 +562,6 @@ footer{
         
     }
     #aboutcontainer{
-        background-color: var(--branco);
         display: grid;
         width: 80%;
         margin: auto;
@@ -533,11 +579,9 @@ footer{
     }
     #quemsou > h1{
         font: 400 60px var(--topicos);
-        color: var(--preto);
     }
     #quemsou h2{
         font: 400 35px var(--topicos);
-        color: var(--preto);
         margin: 0px 10px;
     }
     #quemsou p{
@@ -549,15 +593,12 @@ footer{
         text-align: center;
         font: 400 1.5em var(--topicos);
     }
-    #skillsbox{
-        display: grid;
-    }
+    
     #skillscontainer{
-        grid-template-columns: repeat(auto-fit, minmax( 55px, 1fr));
+        margin: auto;
     }
     .myskills{
-        display: flex;
-        margin: 5px auto;
+        margin: 5px;
         padding: 5px;
         width: 40px;
         font: 400 0em var(--topicos); 
@@ -596,9 +637,7 @@ footer{
         font-size: 11px;
     }
     footer{
-        margin-top: 30px;
         font-size: 5px;
         padding: 8px    ;
     }
-    
 }
