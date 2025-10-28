@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/icon/favicon-16x16.png" type="image/x-png">
-    <script src="script.js" defer></script>
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 </head>
@@ -57,7 +57,7 @@
                 </a>
             </ul>
         </nav>
-        <button id="light-mode-button"><img width="40" height="40" src="assets/icon/lightmodeicon.png" id="light-mode-buttonimg" /></button>
+        <button id="light-mode-button"><img width="40" height="40" src="assets/icon/lightmodeicon.png" id="light-mode-buttonimg"/></button>
     </header>
     <hr id="hr">
 
@@ -291,9 +291,11 @@
         </h1>
 
     </footer>
-
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-container', 'particlesjs-config.json');
+  </script>
 </body>
 
 </html>

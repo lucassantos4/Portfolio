@@ -1,7 +1,4 @@
 
- // PARTICULAS DE FUNDO
-particlesJS.load('particles-container', 'particlesjs-config.json');
-
     // ANIMAÇÃO DE SCROLL
 
 const lp = document.querySelector('#landingpage');
