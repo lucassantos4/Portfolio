@@ -216,11 +216,12 @@ nav{
     color: var(--branco);
     background-color: var(--preto);
     border: solid 1px var(--preto);
-    box-shadow: 1px 1px 5px var(--preto);
+    box-shadow: 1px 1px 5px var(--preto-degrade);
     border-radius: 1px;
     cursor: pointer;
     transition: all 0.3s ease-in;
 }
+
 .socialmediasbutton:hover{
     color: #000;
     background-color: var(--branco) ;
@@ -296,7 +297,8 @@ nav{
     color: var(--preto);
     display: inline;
     width: 50%;
-    margin:auto ;
+    margin: auto ;
+    
 }
 #quemsou > h1{
     font: 400 60px var(--topicos);
@@ -309,6 +311,32 @@ nav{
 #quemsou p{
     font: 400 1em var(--texto);
     margin: 0px 10px 10px 10px;
+}
+
+#contactbuttonaboutmelink{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+}
+#contactbuttonabout{
+    width: 100%;
+    font: 400 16px arial;
+    padding: 10px;
+    color: var(--branco);
+    background-color: var(--preto);
+    border: solid 1px var(--preto);
+    box-shadow: 1px 1px 5px var(--preto-degrade);
+    border-radius: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    pointer-events: all;
+    justify-content: center;
+    
+}
+#contactbuttonabout:hover{
+    color: #000;
+    background-color: var(--branco) ;
 }
 #fotopessoalcontainer{
     display: flex;
@@ -413,9 +441,6 @@ nav{
   
     margin: 100px 0px;
     display: flex;
-    
-    
- 
 }
 #mapslocalizacao{
     display: flex;

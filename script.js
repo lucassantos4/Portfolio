@@ -73,8 +73,9 @@ function ativarModoClaro() {
     document.getElementById("formulariodecontato").style.backgroundColor = "transparent";
     document.getElementById("mapscontainer").style.backgroundColor = "transparent";
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {
-        element.style.backgroundColor = "var(--branco)";
-        element.style.color = "var(--preto)";
+        element.style.filter = "invert(1)";
+        element.style.boxShadow = "1px 1px 5px var(--branco)";
+        
     });
     document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
         element.style.color = "var(--preto)";
@@ -107,8 +108,9 @@ function desativarModoClaro() {
     document.getElementById("menubuttonimg").src = "./assets/menubranco.png";
     document.getElementById("about").style.backgroundColor = "var(--branco)";
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {
-        element.style.backgroundColor = "var(--preto)";
-        element.style.color = "var(--branco)";
+        element.style.filter = "invert(0)";
+        element.style.boxShadow = "1px 1px 8px var(--preto)";
+
     });
     document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
         element.style.color = "var(--branco)";
