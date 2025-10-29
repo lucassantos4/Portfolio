@@ -72,6 +72,7 @@ function ativarModoClaro() {
     document.getElementById("formulariodecontato").style.border = "none";
     document.getElementById("formulariodecontato").style.backgroundColor = "transparent";
     document.getElementById("mapscontainer").style.backgroundColor = "transparent";
+    document.getElementById("fotopessoal").style.borderRadius = "100%";
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {
         element.style.filter = "invert(1)";
         element.style.boxShadow = "1px 1px 5px var(--branco)";
@@ -117,6 +118,7 @@ function desativarModoClaro() {
         element.style.backgroundColor = "var(--preto)";
         element.style.transition = "color 0.4s ease";
     });
+    document.getElementById("fotopessoal").style.borderRadius = "0%";
     document.querySelectorAll(".porcentagembar").forEach((element) => {
         element.style.backgroundColor = "var(--branco-degrade)";
     });
@@ -154,7 +156,7 @@ window.document.addEventListener("mousemove", function(e){
     });
 
 });
-
+ // MASCARA DE CELULAR NO FORMULÁRIO DE CONTATO
 var celular = window.document.getElementById("celular")
 celular.addEventListener("input", () => {
     var limparvalor = celular.value.replace(/\D/g, "").substring(0,11);
