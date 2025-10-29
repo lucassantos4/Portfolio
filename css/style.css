@@ -65,6 +65,14 @@ header{
     font: 400 1rem var(--topicos);
     position: relative;
 }
+#menu{
+    color: var(--preto);
+    display: none;
+}
+#menucontainer{
+    display: flex;
+    margin: auto 0px;
+}
 #light-mode-button{
     display: flex;
     margin-left: 10%;
@@ -89,11 +97,26 @@ nav{
     cursor: pointer;
 
 }
+#navlistfloating{
+    display: none;
+    pointer-events: all;
+    
+}
+#navlistfloating a{
+    text-decoration: none; 
+    color: var(--branco);
+   
+}
 #navlist {
     display: flex;
     margin: auto;
 }   
 .navlistitem{
+    margin: 1vh 3vh;
+    list-style-type: none;
+}
+
+.navlistfloatingitem{
     margin: 1vh 3vh;
     list-style-type: none;
 }
@@ -130,7 +153,6 @@ nav{
 #landingpage{
     display: flex;
     width: 100%;
-   
 }
 .nome{
     pointer-events: none;
@@ -151,7 +173,6 @@ nav{
     text-shadow: 6px 6px 10px var(--preto);
 }
 .linh{
-    
     margin: 40px 0px;
     width: 100%;
     border: solid 0.3rem var(--branco);
@@ -168,7 +189,6 @@ nav{
     pointer-events: all;
 }
 .socialmidias:link{
-
     text-decoration: none;
     justify-content: space-around;
 }
@@ -500,11 +520,53 @@ footer{
     z-index: 2;
 }
 @media screen and  (max-width: 1000px){
+    
     header{
         font-size: 0.8em;
+        justify-content: space-around;
+    }
+    .circle{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        height: auto;
+    }
+    #navlistfloating{
+        display: flex;
+        flex-direction: column;
+        font: 400 16px var(--topicos);
+        background: transparent;
+        backdrop-filter: blur(4px) ;
+        height: fit-content;
+        margin: 20px 10px;
+        box-shadow: 0px 0px 10px var(--preto);
+        border-radius: 8px;
+        width: 200px;
+        transition: all 1s ease-in;
+        z-index: 3;
+        position: absolute;
+        padding: 5px;
+    }
+    #navlistfloating a{
+        background-color: var(--preto);
+        margin: 4px;
+        height: fit-content;
+        border-radius: 2px;
+        box-shadow: 1px 1px 5px var(--preto);
+    }
+    #navlist{   
+        width: fit-content;
+        height: fit-content;
+        margin: 25px;
+        display: none;
     }
     .navlistitem{
         margin: 1vh 0.8em;
+    }
+    #light-mode-button{
+        display: flex;
+        margin: auto 0px;
     }
     .bg{
         display: block;
@@ -610,6 +672,7 @@ footer{
         width: 100%;
         font: 400 7px var(--texto);
         text-align: justify;
+        
     }
     #mapscontainer{
         width: 90%;

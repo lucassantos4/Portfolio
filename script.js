@@ -7,6 +7,17 @@ const myObserver = new IntersectionObserver((entries) => {
 })
 
 myObserver.observe(lp)
+// MENU BAR RESPONSIVO
+
+const menuButton = document.getElementById("menucontainer");
+const navLinks = document.getElementById("navlistfloating");
+menuButton.addEventListener("click", function() {
+    if (navLinks.style.display === "flex") {
+        navLinks.style.display = "none";    
+    } else {
+        navLinks.style.display = "flex";
+    }
+});
 
 // MODO CLARO / ESCURO
 const lightmode = document.getElementById("light-mode-button");
@@ -31,11 +42,11 @@ lightmode.addEventListener("click", function() {
 });
 lightmode.addEventListener("mouseenter", function () {
     if (!isLight) {
-        document.getElementById("light-mode-buttonimg").style.filter = "invert(1)";
-        document.getElementById("light-mode-button").style.backgroundColor = "#fff";
+        document.getElementById("light-mode-buttonimg").src = "./assets/solpreto.png";
+        document.getElementById("light-mode-button").style.backgroundColor = "var(--branco)";
     }else{
-        document.getElementById("light-mode-buttonimg").style.filter = "invert(0)";
-        document.getElementById("light-mode-button").style.backgroundColor = "#000";
+        document.getElementById("light-mode-buttonimg").src = "./assets/solbranco.png";
+        document.getElementById("light-mode-button").style.backgroundColor = "var(--preto)";
     
     }
     document.getElementById("light-mode-buttonimg").style.transition = "filter 0.4s ease";
@@ -43,9 +54,9 @@ lightmode.addEventListener("mouseenter", function () {
 });
 lightmode.addEventListener("mouseleave", function () {
     if (!isLight) {
-        document.getElementById("light-mode-buttonimg").style.filter = "invert(0)";
+        document.getElementById("light-mode-buttonimg").src = "./assets/solbranco.png";
     }else{
-        document.getElementById("light-mode-buttonimg").style.filter = "invert(1)";
+        document.getElementById("light-mode-buttonimg").src = "./assets/solpreto.png";
     }
     document.getElementById("light-mode-button").style.backgroundColor = "transparent";
     document.getElementById("light-mode-buttonimg").style.transition = "filter 0.4s ease";
@@ -54,17 +65,28 @@ lightmode.addEventListener("mouseleave", function () {
 
 function ativarModoClaro() {
     main.style.backgroundColor = "var(--branco)";
-    document.getElementById("about").style.backgroundColor = "var(--preto)";
-    document.getElementById("quemsou").style.color = "var(--branco)";
+    document.getElementById("menubuttonimg").src = "./assets/menupreto.png";
+    document.getElementById("about").style.backgroundColor = "transparent";
+    document.getElementById("about").style.border = "none";
+    document.getElementById("about").style.boxShadow = "none";
     document.getElementById("formulariodecontato").style.border = "none";
     document.getElementById("formulariodecontato").style.backgroundColor = "transparent";
     document.getElementById("mapscontainer").style.backgroundColor = "transparent";
-    document.querySelectorAll("button").forEach((element) => {
-        element.style.filter = "invert(1)";
+    document.querySelectorAll(".socialmediasbutton").forEach((element) => {
+        element.style.backgroundColor = "var(--branco)";
+        element.style.color = "var(--preto)";
     });
-    document.querySelectorAll("header").forEach((element) => {
+    document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
+        element.style.color = "var(--preto)";
+        element.style.backgroundColor = "var(--branco)";
+        element.style.transition = "color 0.4s ease";
+    });
+    document.querySelectorAll("nav").forEach((element) => {
         element.style.filter = "invert(1)";
         element.style.transition = "filter 0.4s ease";
+    });
+    document.querySelectorAll(".porcentagembar").forEach((element) => {
+        element.style.backgroundColor = "var(--preto-degrade)";
     });
     document.getElementById("mapscontainer").style.border = "none";
     document.getElementById("skillsbox").style.backgroundColor = "transparent";
@@ -75,30 +97,41 @@ function ativarModoClaro() {
     document.querySelectorAll(".myskills").forEach((element) => {
         element.style.backgroundColor = "var(--preto-degrade)";
     });
-    document.getElementById("light-mode-buttonimg").style.filter = "invert(1)";
+    document.getElementById("header").style.backgroundColor = "var(--branco)";
+    document.getElementById("light-mode-buttonimg").src = "./assets/solpreto.png";
     isLight = true;
 }
 
 function desativarModoClaro() {
-    main.removeAttribute("style");
-    document.getElementById("about").removeAttribute("style");
-    document.getElementById("quemsou").removeAttribute("style");
-    document.getElementById("formulariodecontato").removeAttribute("style");
-    document.getElementById("mapscontainer").removeAttribute("style");
-    document.getElementById("skillsbox").removeAttribute("style");
-    document.querySelector("footer").removeAttribute("style");
-    document.getElementById("contactbuttonabout").removeAttribute("style");
-    document.getElementById("myprojects").removeAttribute("style");
+    main.style.backgroundColor = "var(--preto)";
+    document.getElementById("menubuttonimg").src = "./assets/menubranco.png";
+    document.getElementById("about").style.backgroundColor = "var(--branco)";
+    document.querySelectorAll(".socialmediasbutton").forEach((element) => {
+        element.style.backgroundColor = "var(--preto)";
+        element.style.color = "var(--branco)";
+    });
+    document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
+        element.style.color = "var(--branco)";
+        element.style.backgroundColor = "var(--preto)";
+        element.style.transition = "color 0.4s ease";
+    });
+    document.querySelectorAll(".porcentagembar").forEach((element) => {
+        element.style.backgroundColor = "var(--branco-degrade)";
+    });
+    document.getElementById("formulariodecontato").style.backgroundColor = "var(--branco)";
+    document.getElementById("mapscontainer").style.backgroundColor = "var(--branco)";
+    document.querySelector("footer").style.backgroundColor = "var(--preto)";
+    document.querySelector("footer").style.color = "var(--branco)";
+    document.getElementById("myprojects").style.color = "var(--branco)";
+    document.getElementById("header").style.backgroundColor = "var(--preto)";
     document.querySelectorAll(".myskills").forEach((element) => {
         element.removeAttribute("style");
     });
-    document.querySelectorAll("button").forEach((element) => {
+     document.getElementById("skillsbox").style.color = "var(--branco)";
+    document.querySelectorAll("nav").forEach((element) => {
         element.style.filter = "invert(0)";
     });
-    document.querySelectorAll("header").forEach((element) => {
-        element.style.filter = "invert(0)";
-    });
-    document.getElementById("light-mode-buttonimg").style.filter = "invert(0)";
+    document.getElementById("light-mode-buttonimg").src = "./assets/solbranco.png";
     isLight = false;
 }
 
