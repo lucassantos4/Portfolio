@@ -533,7 +533,7 @@ footer{
         height: auto;
     }
     #navlistfloating{
-        display: flex;
+        display: none;
         flex-direction: column;
         font: 400 16px var(--topicos);
         background: transparent;
