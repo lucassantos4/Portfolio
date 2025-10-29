@@ -184,7 +184,8 @@ nav{
 #socialmidiascontainer{
     width: 100%;
     padding: 10px ;
-    background-color: #00000070;
+    background: var(--preto-degrade);
+    backdrop-filter: blur(6px);
     box-shadow: 1px 1px 5px var(--preto);
     pointer-events: all;
 }
@@ -215,6 +216,7 @@ nav{
     color: var(--branco);
     background-color: var(--preto);
     border: solid 1px var(--preto);
+    box-shadow: 1px 1px 5px var(--preto);
     border-radius: 1px;
     cursor: pointer;
     transition: all 0.3s ease-in;
