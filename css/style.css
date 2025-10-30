@@ -244,7 +244,7 @@ nav{
 }
 .projetos{
     width: 80%;
-    background-color: var(--verdeclaro);
+    background-color: var(--branco);
     pointer-events: all;
     padding: 20px;
     margin: 20px;
