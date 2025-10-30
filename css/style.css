@@ -19,12 +19,12 @@
     height: 24px;
     width: 24px;
     border-radius: 24px;
-    background-color: #000;
+    background-color: var(--verdeescuro);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
-
+    z-index: 3;
+    pointer-events: none;
 }
 canvas{ 
   display: block;
@@ -40,6 +40,7 @@ canvas{
   pointer-events: auto;
 }
 html{
+    cursor: none;
     scroll-behavior: smooth;
 }
 h1 , p , h2{
@@ -95,17 +96,14 @@ nav{
 }
 #light-mode-button:hover{
     cursor: pointer;
-
 }
 #navlistfloating{
     display: none;
-    pointer-events: all;
-    
+    pointer-events: all;   
 }
 #navlistfloating a{
     text-decoration: none; 
-    color: var(--branco);
-   
+    color: var(--branco); 
 }
 #navlist {
     display: flex;
@@ -115,12 +113,10 @@ nav{
     margin: 1vh 3vh;
     list-style-type: none;
 }
-
 .navlistfloatingitem{
     margin: 1vh 3vh;
     list-style-type: none;
 }
-
 #navlist a{
     color: var(--branco);
     text-decoration: none;
@@ -132,7 +128,7 @@ nav{
     color: var(--preto);
     background-color: var(--branco);
     border-radius: 2px;
-    
+    cursor: none;
 }
 
 #hr{
@@ -245,7 +241,6 @@ nav{
     display: flex;
     margin: auto;
     width: 80%;
-    
 }
 .projetos{
     width: 80%;
@@ -284,8 +279,7 @@ nav{
     align-items: center;
     box-shadow: 1px 1px 5px #0000007e;
     pointer-events: all;
-
-    
+    cursor: auto;
 }
 #aboutcontainer{
     display: flex;
@@ -298,7 +292,6 @@ nav{
     display: inline;
     width: 50%;
     margin: auto ;
-    
 }
 #quemsou > h1{
     font: 400 60px var(--topicos);
@@ -317,7 +310,6 @@ nav{
     display: flex;
     justify-content: center;
     text-decoration: none;
-
 }
 #contactbuttonabout{
     width: 100%;
@@ -358,7 +350,6 @@ nav{
     text-align: center;
     font: 400 50px var(--topicos);
     padding: 0px;
-    
 }
 
 #skillsbox{
@@ -438,14 +429,12 @@ nav{
     text-align: end;
 }
 #contact{
-  
     margin: 100px 0px;
     display: flex;
 }
 #mapslocalizacao{
     display: flex;
     margin: auto;
-
 }
 #mapscontainer h1{
     padding: 5px 0px;
@@ -460,11 +449,9 @@ nav{
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
     pointer-events: all;
-
 }
 iframe{
     width: 100%;
-   
 }
 #formulariodecontato{
     background-color: var(--branco) ;
@@ -475,7 +462,6 @@ iframe{
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
     pointer-events: all;
-
 }
 #formulariodecontato h1{
         font: 400 40px var(--topicos);
@@ -536,8 +522,6 @@ textarea{
     font: 300 14px var(--texto);
     margin: 10px 5px;
 }
-
-
 footer{
     background-color: var(--branco);
     color: var(--preto);
@@ -546,8 +530,14 @@ footer{
     padding: 10px;
     z-index: 2;
 }
+
 @media screen and  (max-width: 1000px){
-    
+    html{
+        cursor: auto;
+    }
+    .circle{
+        display: none;
+    }
     header{
         font-size: 0.8em;
         justify-content: space-around;
@@ -599,7 +589,6 @@ footer{
         display: block;
         width: 100%;
         overflow: hidden;
-
     }
     #landingpage{
         width: 100%;
@@ -699,7 +688,6 @@ footer{
         width: 100%;
         font: 400 7px var(--texto);
         text-align: justify;
-        
     }
     #mapscontainer{
         width: 90%;

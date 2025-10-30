@@ -99,6 +99,9 @@ function ativarModoClaro() {
     document.querySelectorAll(".myskills").forEach((element) => {
         element.style.backgroundColor = "var(--preto-degrade)";
     });
+    document.querySelectorAll(".circle").forEach((element) => {
+        element.style.backgroundColor = "var(--preto)";
+    });
     document.getElementById("header").style.backgroundColor = "var(--branco)";
     document.getElementById("light-mode-buttonimg").src = "./assets/solpreto.png";
     isLight = true;
@@ -131,7 +134,10 @@ function desativarModoClaro() {
     document.querySelectorAll(".myskills").forEach((element) => {
         element.removeAttribute("style");
     });
-     document.getElementById("skillsbox").style.color = "var(--branco)";
+    document.querySelectorAll(".circle").forEach((element) => {
+        element.style.backgroundColor = "var(--branco)";
+    });
+    document.getElementById("skillsbox").style.color = "var(--branco)";
     document.querySelectorAll("nav").forEach((element) => {
         element.style.filter = "invert(0)";
     });
@@ -150,12 +156,33 @@ circles.forEach(function (circle){
 window.document.addEventListener("mousemove", function(e){ 
     coords.x = e.clientX;
     coords.y = e.clientY;
+
+   
+});
+
+function animateCircles(){
+
+    let x = coords.x;
+    let y = coords.y;
+
     circles.forEach(function (circle , index) {
-        circle.style.left = coords.x -5000 + "px";
-        circle.style.top = coords.y -12 + "px";
+        circle.style.left = x -12 + "px";
+        circle.style.top = y -12 + "px";
+
+        circle.style.scale = (circles.length - index) / circles.length;
+
+        circle.x = x;
+        circle.y = y;
+
+        const nextCircle = circles[index + 1] || circles[0];
+        x += (nextCircle.x - x) * 0.3;
+        y += (nextCircle.y - y) * 0.3;
+
     });
 
-});
+    requestAnimationFrame(animateCircles);
+}
+animateCircles();
  // MASCARA DE CELULAR NO FORMULÁRIO DE CONTATO
 var celular = window.document.getElementById("celular")
 celular.addEventListener("input", () => {
