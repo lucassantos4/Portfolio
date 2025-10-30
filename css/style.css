@@ -19,7 +19,7 @@
     height: 24px;
     width: 24px;
     border-radius: 24px;
-    background-color: var(--verdeescuro);
+    background-color: var(--branco);
     position: fixed;
     top: 0;
     left: 0;
@@ -244,7 +244,7 @@ nav{
 }
 .projetos{
     width: 80%;
-    background-color: var(--branco);
+    background-color: var(--verdeclaro);
     pointer-events: all;
     padding: 20px;
     margin: 20px;
