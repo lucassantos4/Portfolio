@@ -23,7 +23,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 3;
+    z-index: 4;
     pointer-events: none;
 }
 canvas{ 
@@ -36,7 +36,8 @@ canvas{
   background-repeat: no-repeat; 
   background-size: cover; 
   background-position: 100% 100%;
-  z-index: -1;
+  z-index: 1;
+ 
   pointer-events: auto;
 }
 html{
@@ -52,7 +53,6 @@ main{
     color: var(--branco);
     position: relative;
     pointer-events: none;
-    z-index: 1;
     padding-bottom:30px ;
 }
 header{
@@ -65,6 +65,7 @@ header{
     padding: 10px 0px;
     font: 400 1rem var(--topicos);
     position: relative;
+    z-index: 3;
 }
 #menu{
     color: var(--preto);
@@ -140,15 +141,21 @@ nav{
     width: 100%;
     height: 100vh;
     display: flex;
-    background-image: linear-gradient(to bottom, var(--preto-degrade) , var(--preto)),  url('../assets/bg.jpg') ;
+    background:  url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 1px 1px 5px #0000007e;
     cursor: default;
+    position: relative;
+    z-index: 1;
 }
 #landingpage{
+    background: linear-gradient(to bottom, var(--preto-degrade) , var(--preto));
     display: flex;
     width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    
 }
 .nome{
     pointer-events: none;
@@ -156,10 +163,14 @@ nav{
     margin: 0rem 10rem 0rem 1rem ;
     color: var(--branco);
     text-shadow: 4px 4px 19px var(--preto);
+    z-index: 4;
 }
 #aboutme{
     margin: auto 15%;
     width: fit-content;
+    position: relative;
+    z-index: 4;
+    position: relative;
 }
 #aboutme p{
     pointer-events: none;
@@ -167,15 +178,21 @@ nav{
     font: 400 20px var(--texto);
     color: var(--branco);
     text-shadow: 6px 6px 10px var(--preto);
+    z-index: 3;
+    position: relative;
 }
 .linh{
     margin: 40px 0px;
     width: 100%;
     border: solid 0.3rem var(--branco);
     box-shadow: 1px 1px 10px var(--preto);
+    z-index: 3;
+    position: relative;
 }
 #hrbtcontain{
     width: 60%;
+    z-index: 3;
+    position: relative;
 }
 #socialmidiascontainer{
     width: 100%;
@@ -184,6 +201,8 @@ nav{
     backdrop-filter: blur(6px);
     box-shadow: 1px 1px 5px var(--preto);
     pointer-events: all;
+    z-index: 4;
+    position: relative;
 }
 .socialmidias:link{
     text-decoration: none;
@@ -251,7 +270,7 @@ nav{
     transition: all 0.6s ease;
     cursor: none;
     height: fit-content;
-    z-index: 2;
+    z-index: 3;
 }
 
 .projetos:hover{
@@ -280,18 +299,22 @@ nav{
     box-shadow: 1px 1px 5px #0000007e;
     pointer-events: all;
     cursor: auto;
+    z-index: 2;
+    position: relative;
 }
 #aboutcontainer{
     display: flex;
     margin:  auto;
     width: 80%;
     padding: 5vh 20px 0px 20px;
+    z-index: 2;
 }
 #quemsou{
     color: var(--preto);
     display: inline;
     width: 50%;
     margin: auto ;
+    z-index: 2;
 }
 #quemsou > h1{
     font: 400 60px var(--topicos);
@@ -310,6 +333,7 @@ nav{
     display: flex;
     justify-content: center;
     text-decoration: none;
+    z-index: 2;
 }
 #contactbuttonabout{
     width: 100%;
@@ -324,7 +348,7 @@ nav{
     transition: all 0.3s ease-in;
     pointer-events: all;
     justify-content: center;
-    
+    z-index: 2;
 }
 #contactbuttonabout:hover{
     color: #000;
@@ -376,11 +400,13 @@ nav{
     box-shadow: 2px 2px 5px var(--preto-degrade);
     pointer-events: all;
     padding: 10px;
+    z-index: 2;
 }
 .myskills img{
     margin: auto;
     display: flex;
     width: 80%;
+    
 }
 .myskills:hover{
     transform: scale(1.2);
@@ -397,6 +423,7 @@ nav{
     width: 100%;
     align-items: center;
     text-align: justify;
+    z-index: 2;
 }
 .porcentagembar{
     border-radius: 10px;
@@ -404,7 +431,7 @@ nav{
     text-indent: 10px;
     display: flex;
     margin: auto;
-    background-color: var(--preto-degrade);
+    background-color: var(--branco-degrade);
     width: 100%;
     margin: 10px 0px ;
 }
@@ -449,6 +476,7 @@ nav{
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
     pointer-events: all;
+    z-index: 2;
 }
 iframe{
     width: 100%;
@@ -462,6 +490,7 @@ iframe{
     border: solid 4px var(--verdeclaro);
     border-radius: 5px;
     pointer-events: all;
+    z-index: 2;
 }
 #formulariodecontato h1{
         font: 400 40px var(--topicos);
@@ -528,7 +557,6 @@ footer{
     font: 600 7px var(--texto);
     text-align: center;
     padding: 10px;
-    z-index: 2;
 }
 
 @media screen and  (max-width: 1000px){

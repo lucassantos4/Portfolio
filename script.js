@@ -76,8 +76,8 @@ function ativarModoClaro() {
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {
         element.style.filter = "invert(1)";
         element.style.boxShadow = "1px 1px 5px var(--branco)";
-        
     });
+    document.getElementById("landingpage").style.backgroundImage = "linear-gradient(to bottom, transparent , var(--branco))";
     document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
         element.style.color = "var(--preto)";
         element.style.backgroundColor = "var(--branco)";
@@ -114,8 +114,8 @@ function desativarModoClaro() {
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {
         element.style.filter = "invert(0)";
         element.style.boxShadow = "1px 1px 8px var(--preto)";
-
     });
+    document.getElementById("landingpage").style.backgroundImage = "linear-gradient(to bottom, transparent , var(--preto))";
     document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
         element.style.color = "var(--branco)";
         element.style.backgroundColor = "var(--preto)";
