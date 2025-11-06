@@ -11,14 +11,19 @@ myObserver.observe(lp)
 
 const menuButton = document.getElementById("menucontainer");
 const navLinks = document.getElementById("navlistfloating");
-menuButton.addEventListener("click", function() {
-    if (navLinks.style.display === "flex") {
+const html = document.querySelector("html");
+menuButton.addEventListener("click", function(event) {
+    if (navLinks.style.display === "flex" && !navLinks.contains(event.target) && !lightmode.contains(event.target)) {
         navLinks.style.display = "none";    
-    } else {
+    }else{
         navLinks.style.display = "flex";
     }
 });
-
+html.addEventListener("click", function(event) {
+    if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
+        navLinks.style.display = "none";
+    }
+});
 // MODO CLARO / ESCURO
 const lightmode = document.getElementById("light-mode-button");
 const main = document.querySelector("main");
@@ -69,6 +74,10 @@ function ativarModoClaro() {
     document.getElementById("about").style.backgroundColor = "transparent";
     document.getElementById("about").style.border = "none";
     document.getElementById("about").style.boxShadow = "none";
+    document.getElementById("descricaobreve").style.backgroundColor = "#0f0f0f0c";
+    document.getElementById("descricaobreve").style.boxShadow = "0px 0px 10px var(--preto-degrade)";
+    document.getElementById("descricaobreve").style.backdropFilter = "blur(50px)";
+    document.getElementById("descricaobreve").style.borderRadius = "10px";
     document.getElementById("formulariodecontato").style.border = "none";
     document.getElementById("formulariodecontato").style.backgroundColor = "transparent";
     document.getElementById("mapscontainer").style.backgroundColor = "transparent";
@@ -109,6 +118,9 @@ function ativarModoClaro() {
 
 function desativarModoClaro() {
     main.style.backgroundColor = "var(--preto)";
+    document.getElementById("descricaobreve").style.backgroundColor = "transparent";
+    document.getElementById("descricaobreve").style.boxShadow = "none";
+    document.getElementById("descricaobreve").style.backdropFilter = "blur(0px)";
     document.getElementById("menubuttonimg").src = "./assets/menubranco.png";
     document.getElementById("about").style.backgroundColor = "var(--branco)";
     document.querySelectorAll(".socialmediasbutton").forEach((element) => {

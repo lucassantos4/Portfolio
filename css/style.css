@@ -37,7 +37,6 @@ canvas{
   background-size: cover; 
   background-position: 100% 100%;
   z-index: 1;
- 
   pointer-events: auto;
 }
 html{
@@ -141,15 +140,14 @@ nav{
     width: 100%;
     height: 100vh;
     display: flex;
-    background:  url('../assets/bg.jpg') ;
+    background:  linear-gradient(to bottom, var(--preto-degrade), var(--preto)) , url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: default;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 #landingpage{
-    background: linear-gradient(to bottom, var(--preto-degrade) , var(--preto));
     display: flex;
     width: 100%;
     overflow: hidden;
@@ -174,10 +172,10 @@ nav{
 }
 #aboutme p{
     pointer-events: none;
-    padding: 0px 0px  20px 0px;
+    padding: 6px 15px  10px 15px;
     font: 400 20px var(--texto);
     color: var(--branco);
-    text-shadow: 6px 6px 10px var(--preto);
+    border-radius: 2px;
     z-index: 3;
     position: relative;
 }
@@ -570,12 +568,16 @@ footer{
         font-size: 0.8em;
         justify-content: space-around;
     }
+    #bg{
+        overflow: hidden;
+    }
     .circle{
         display: none;
     }
     #menu{
         display: flex;
         height: auto;
+        
     }
     #navlistfloating{
         display: none;
@@ -589,7 +591,7 @@ footer{
         border-radius: 8px;
         width: 200px;
         transition: all 1s ease-in;
-        z-index: 3;
+        z-index: 5;
         position: absolute;
         padding: 5px;
     }
@@ -614,9 +616,8 @@ footer{
         margin: auto 0px;
     }
     .bg{
-        display: block;
+        height: 85vh;
         width: 100%;
-        overflow: hidden;
     }
     #landingpage{
         width: 100%;
@@ -643,6 +644,8 @@ footer{
     }
     #myprojects{
         margin-top: 0px;
+        z-index: 2;
+        position: relative;
     }
     #projetoscontainer{
         display: inline;
@@ -718,6 +721,7 @@ footer{
         text-align: justify;
     }
     #mapscontainer{
+        position: relative;
         width: 90%;
         height: fit-content;
         font-size: 15px;
@@ -730,6 +734,7 @@ footer{
         display: inline;
     }
     #formulariodecontato{
+        position: relative;
         margin: 20px auto;
         width: 80%;
     }
