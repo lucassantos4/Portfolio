@@ -632,7 +632,7 @@ footer{
         font-size: 5.8em;
     }
     #aboutme p{
-        padding: 0px;
+        padding: 5px 0px 5px 10px;
         font-size: 0.7em;
     }
     #socialmidiascontainer{
