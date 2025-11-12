@@ -4,6 +4,7 @@
     margin: 0px;
 }
 
+
 :root{
     --preto-degrade: #0f0f0f65 ;
     --preto: #0f0f0f;
@@ -187,7 +188,7 @@ nav{
 .linh{
     margin: 40px 0px;
     width: 100%;
-    border: solid 0.3rem var(--branco);
+    border: solid 0.3rem var(--branco-degrade);
     box-shadow: 1px 1px 10px var(--preto);
     z-index: 3;
     position: relative;
@@ -200,11 +201,9 @@ nav{
 #socialmidiascontainer{
     width: 100%;
     padding: 10px ;
-    background: var(--preto-degrade);
-    backdrop-filter: blur(6px);
-    box-shadow: 1px 1px 5px var(--preto);
+    backdrop-filter: blur(4px);
+    box-shadow: 1px 1px 10px var(--preto);
     pointer-events: all;
-    z-index: 4;
     position: relative;
 }
 .socialmidias:link{

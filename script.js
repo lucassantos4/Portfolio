@@ -220,7 +220,9 @@ about.addEventListener("mouseleave" , function() {
 about.addEventListener("mouseover" , function() {
         // caso modo escuro
     if(isLight === false ){
-        about.style.backgroundColor = "var(--branco-degrade)"
+        document.querySelectorAll(".circle").forEach(circle => {
+            circle.style.backgroundColor = "var(--preto)";
+        });
         document.getElementById("fotopessoalcontainer").style.backgroundColor = "var(--verdeescuro)"
         document.getElementById("fotopessoalcontainer").style.boxShadow = "0px 0px 15px #0000003f"
     }
@@ -228,7 +230,9 @@ about.addEventListener("mouseover" , function() {
 about.addEventListener("mouseleave" , function() {
 
     if(isLight === false ){
-        about.style.backgroundColor = "var(--branco)"
+        document.querySelectorAll(".circle").forEach(circle => {
+            circle.style.backgroundColor = "var(--branco)";
+        });
         document.getElementById("fotopessoalcontainer").style.backgroundColor = ""
         document.getElementById("fotopessoalcontainer").style.transition = "all 1s"
     }
