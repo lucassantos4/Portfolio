@@ -1,5 +1,7 @@
-
-    // ANIMAÇÃO DE SCROLL
+  
+  
+  
+  // ANIMAÇÃO DE SCROLL
 
 const lp = document.querySelector('#landingpage');
 const myObserver = new IntersectionObserver((entries) => {
@@ -7,42 +9,83 @@ const myObserver = new IntersectionObserver((entries) => {
 })
 
 myObserver.observe(lp)
-// MENU BAR RESPONSIVO
+// MENU BAR RESPONSIVO E ANIMADO
 
 const menuButton = document.getElementById("menucontainer");
 const navLinks = document.getElementById("navlistfloating");
 const html = document.querySelector("html");
 menuButton.addEventListener("click", function(event) {
     if (navLinks.style.display === "flex" && !navLinks.contains(event.target) && !lightmode.contains(event.target)) {
-        navLinks.style.display = "none";    
+        navLinks.style.display = "none"; 
+        menuButton.style.rotate = "none";
+        menuButton.style.transition = "all 0.5s";  
+        document.getElementById("linha2").style.backgroundColor = ""
+        document.getElementById("linha1").style.rotate = ""
+        document.getElementById("linha3").style.rotate = ""
+        document.getElementById("linha1").style.position = "relative"
+        document.getElementById("linha3").style.position = "relative"
+
     }else{
-        navLinks.style.display = "flex";
+        navLinks.style.display = "flex"
+        menuButton.style.rotate = "90deg"
+        menuButton.style.transition = "all 0.5s"; 
+        document.getElementById("linha2").style.backgroundColor= "transparent"
+        document.getElementById("linha1").style.rotate = "-45deg"
+        document.getElementById("linha3").style.rotate = "45deg"
+        document.getElementById("linha1").style.position = "absolute"
+        document.getElementById("linha3").style.position = "absolute"
+
     }
 });
 html.addEventListener("click", function(event) {
     if (!menuButton.contains(event.target) && !navLinks.contains(event.target)) {
         navLinks.style.display = "none";
+        menuButton.style.rotate = "none"
+        menuButton.style.transition = "all 0.5s"  
+        document.getElementById("linha2").style.backgroundColor = "" 
+        document.getElementById("linha1").style.rotate = "" 
+        document.getElementById("linha3").style.rotate = "" 
+        document.getElementById("linha1").style.position = "relative" 
+        document.getElementById("linha3").style.position = "relative" 
+        
     }
 });
+window.addEventListener("resize" , function() {
+    if(window.innerWidth > 1000){
+        navLinks.style.display = "none";
+        menuButton.style.rotate = "none"
+        document.getElementById("linha2").style.backgroundColor = "" 
+        document.getElementById("linha1").style.rotate = "" 
+        document.getElementById("linha3").style.rotate = "" 
+        document.getElementById("linha1").style.position = "relative" 
+        document.getElementById("linha3").style.position = "relative"
+    }
+});
+
 // MODO CLARO / ESCURO
 const lightmode = document.getElementById("light-mode-button");
 const main = document.querySelector("main");
+const css = document.getElementById("css")
 let isLight = false; 
 
 if (localStorage.getItem("theme") === "light") {
-    ativarModoClaro();
+    css.setAttribute("href" , "./css/claro.css");
+    document.getElementById("light-mode-buttonimg").src = "./assets/solpreto.png";
     isLight = true;
 }
 
+
 lightmode.addEventListener("click", function() {
     if (!isLight) {
-        ativarModoClaro();
         localStorage.setItem("theme", "light"); 
         isLight = true;
+        css.setAttribute("href" , "./css/claro.css");
+        window.location.reload()
     } else {
-        desativarModoClaro();
         localStorage.setItem("theme", "dark");  
         isLight = false;
+        window.location.reload()
+        css.setAttribute("href" , "./css/escuro.css");
     }
 });
 lightmode.addEventListener("mouseenter", function () {
@@ -56,7 +99,7 @@ lightmode.addEventListener("mouseenter", function () {
     }
     document.getElementById("light-mode-buttonimg").style.transition = "filter 0.4s ease";
 
-});
+});  
 lightmode.addEventListener("mouseleave", function () {
     if (!isLight) {
         document.getElementById("light-mode-buttonimg").src = "./assets/solbranco.png";
@@ -67,17 +110,17 @@ lightmode.addEventListener("mouseleave", function () {
     document.getElementById("light-mode-buttonimg").style.transition = "filter 0.4s ease";
 });
 
-
+/*
 function ativarModoClaro() {
     main.style.backgroundColor = "var(--branco)";
     document.getElementById("menubuttonimg").src = "./assets/menupreto.png";
     document.getElementById("about").style.backgroundColor = "transparent";
     document.getElementById("about").style.border = "none";
     document.getElementById("about").style.boxShadow = "none";
-    document.getElementById("descricaobreve").style.backgroundColor = "#0f0f0f0c";
-    document.getElementById("descricaobreve").style.boxShadow = "0px 0px 10px var(--preto-degrade)";
+    document.getElementById("descricaobreve").style.backgroundColor = "";
+    document.getElementById("descricaobreve").style.boxShadow = "0px 0px 5px var(--preto-degrade)";
     document.getElementById("descricaobreve").style.backdropFilter = "blur(50px)";
-    document.getElementById("descricaobreve").style.borderRadius = "10px";
+    document.getElementById("descricaobreve").style.borderRadius = "0px";
     document.getElementById("formulariodecontato").style.border = "none";
     document.getElementById("formulariodecontato").style.backgroundColor = "transparent";
     document.getElementById("mapscontainer").style.backgroundColor = "transparent";
@@ -127,7 +170,7 @@ function desativarModoClaro() {
         element.style.filter = "invert(0)";
         element.style.boxShadow = "1px 1px 8px var(--preto)";
     });
-    document.getElementById("landingpage").style.backgroundImage = "linear-gradient(to bottom, transparent , var(--preto))";
+    document.getElementById("landingpage").style.backgroundImage = "linear-gradient(to bottom, var(--preto-degrade)  , var(--preto))";
     document.querySelectorAll(".navlistfloatingitem").forEach((element) => {
         element.style.color = "var(--branco)";
         element.style.backgroundColor = "var(--preto)";
@@ -156,7 +199,54 @@ function desativarModoClaro() {
     document.getElementById("light-mode-buttonimg").src = "./assets/solbranco.png";
     isLight = false;
 }
+*/
+ // animação about
+const about = document.getElementById("about")
+about.addEventListener("mouseover" , function() {
+        //caso modo claro
+    if(isLight === true ){
+        about.style.backgroundColor = "var(--preto-degrade)"
+        document.getElementById("fotopessoal").style.borderRadius = "45%"
+        
+    }
+});
+about.addEventListener("mouseleave" , function() {
 
+    if(isLight === true ){
+        about.style.background = "var(--branco)"
+        document.getElementById("fotopessoal").style.borderRadius = ""
+    }
+});
+about.addEventListener("mouseover" , function() {
+        // caso modo escuro
+    if(isLight === false ){
+        about.style.backgroundColor = "var(--branco-degrade)"
+        document.getElementById("fotopessoalcontainer").style.backgroundColor = "var(--verdeescuro)"
+        document.getElementById("fotopessoalcontainer").style.boxShadow = "0px 0px 15px #0000003f"
+    }
+});
+about.addEventListener("mouseleave" , function() {
+
+    if(isLight === false ){
+        about.style.backgroundColor = "var(--branco)"
+        document.getElementById("fotopessoalcontainer").style.backgroundColor = ""
+        document.getElementById("fotopessoalcontainer").style.transition = "all 1s"
+    }
+});
+about.addEventListener("mouseover" , function() {
+
+    about.style.transition = "all 0.6s ease"
+    document.getElementById("fotopessoal").style.scale = "1.1"
+    document.getElementById("fotopessoal").style.transition = "all 0.5s ease"
+});
+about.addEventListener("mouseleave" , function() {
+
+    about.style.transition = "all 0.6s ease"
+    document.getElementById("fotopessoal").style.borderRadius = ""
+    document.getElementById("fotopessoal").style.scale = ""
+    document.getElementById("fotopessoal").style.transition = "all 0.5s ease"
+
+});
     //MOUSE PERSONALIZADO
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll(".circle");

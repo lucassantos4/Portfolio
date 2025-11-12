@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfólio de Lucas Santos — desenvolvedor web e acadêmico.">
     <title>Portfólio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/escuro.css" id="css">
     <link rel="shortcut icon" href="assets/icon/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="assets/icon/favicon-16x16.png" type="image/x-png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
 <body>
     <div class="circle"></div>
     <div class="circle"></div>
@@ -21,12 +23,14 @@
     <div class="circle"></div>
     <div class="circle"></div>
     <div class="circle"></div>
-    
+
+
     <header id="header">
         <div id="menucontainer">
-            <div id="menu" style="width: 30px; height: 30px;">
-                <img src="assets/menubranco.png" alt="botão menu" id="menubuttonimg">
-            </div>
+            <div class="menu" id="linha1"></div>
+            <div class="menu" id="linha2"></div>
+            <div class="menu" id="linha3"></div>
+            
         </div>
         <nav>
             <ul id="navlist">
@@ -52,37 +56,39 @@
                 </a>
             </ul>
         </nav>
-        <button id="light-mode-button"><img style=" width: 30px; height: 30px;" src="assets/solbranco.png" id="light-mode-buttonimg" /></button>
+        <button id="light-mode-button"><img style=" width: 30px; height: 30px;" src="assets/solbranco.png"
+                id="light-mode-buttonimg" /></button>
     </header>
     <hr id="hr">
     <main>
         <section class="bg">
             <section id="landingpage" class="aboutmecontainer">
                 <ul id="navlistfloating">
-                    <a href="#myprojects" class="navlistfloatingitem" >
+                    <a href="#myprojects" class="navlistfloatingitem">
                         <li class="navlistfloatingitem" id="navlistfloatingitem2">
                             Meus Projetos
                         </li>
                     </a>
-                    <a href="#about" class="navlistfloatingitem"  >
+                    <a href="#about" class="navlistfloatingitem">
                         <li class="navlistfloatingitem" id="navlistfloatingitem1">
                             Sobre Mim
                         </li>
                     </a>
-                    <a href="#skills" class="navlistfloatingitem" >
+                    <a href="#skills" class="navlistfloatingitem">
                         <li class="navlistfloatingitem" id="navlistfloatingitem3">
                             Minhas habilidades
                         </li>
                     </a>
-                    <a href="#contact" class="navlistfloatingitem" >
+                    <a href="#contact" class="navlistfloatingitem">
                         <li class="navlistfloatingitem" id="navlistfloatingitem4">
                             Fale Comigo
                         </li>
                     </a>
                 </ul>
                 <article id="aboutme">
-                    <h1 class="nome"><strong>Lucas Santos</strong></h1>
-                    <p id="descricaobreve">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
+                    <h1 id="nome"><strong>Lucas Santos</strong></h1>
+                    <p id="descricaobreve">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação,
+                        funcionalidade e experiência do usuário.</p>
                     <div id="hrbtcontain">
                         <hr class="linh">
                         <div id="socialmidiascontainer">
@@ -133,7 +139,7 @@
                         Lambda Academy
                     </h1>
                     <p class="projetosdesc">
-                        <strong>Lambda Academy</strong> é um projeto pessoal que idealizei e desenvolvo continuamente,
+                        <strong>Lambda Academy</strong> é um projeto pessoal qual idealizei e desenvolvo continuamente,
                         voltado à educação
                         digital. A plataforma busca tornar o aprendizado mais acessível e envolvente, unindo tecnologia,
                         design e inovação em uma experiência intuitiva.
@@ -142,7 +148,7 @@
                 <div id="projeto2" class="projetos">
                     <img src="assets/projeto2img.png" alt="Meu Projeto" class="projetosimage">
                     <h1 class="projetostittle">
-                        Tela de cancelamento - EngPlay
+                        EngPlay
                     </h1>
                     <p class="projetosdesc">
                         Projeto acadêmico desenvolvido para a <strong>EngPlay</strong>
@@ -157,7 +163,7 @@
                         Karuka
                     </h1>
                     <p class="projetosdesc">
-                        Participei do projeto acadêmico <strong>Karuka</strong>. Aplicativo de turismo inteligente
+                        rojeto acadêmico <strong>Karuka</strong>. Aplicativo de turismo inteligente
                         voltado para Aracaju. O projeto busca personalizar experiências, conectar turistas ao comércio
                         local e promover acessibilidade, valorizando a cultura sergipana por meio da tecnologia.
                     </p>
@@ -169,14 +175,13 @@
                 <article id="quemsou">
                     <h1>Sobre mim</h1>
                     <h2>Quem eu sou</h2>
-                    <p><strong>Lucas Santos</strong>, estudante de Ciência da Computação com experiência em projetos
+                    <p><strong>Lucas Santos</strong>, estudante de <strong>Ciência da Computação</strong> com experiência em projetos
                         acadêmicos
                         aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas próximas ao
-                        mercado. Atualmente, concentro meus estudos em JavaScript e tecnologias de desenvolvimento web,
-                        buscando aprimorar meu conhecimento técnico e contribuir de forma efetiva em projetos.</p>
-                    <a href="#contact" id="contactbuttonaboutmelink" >
-                        <button class="buttonaboutme" id="contactbuttonabout"
-                            style="width: 50%; margin: 20px 0px;">
+                        <strong>mercado</strong>. Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. 
+                        Busco aprimorar meu conhecimento técnico e contribuir de forma efetiva em seus projetos.</p>
+                    <a href="#contact" id="contactbuttonaboutmelink">
+                        <button class="buttonaboutme" id="contactbuttonabout" style="width: 50%; margin: 20px 0px;">
                             VAMOS CONVERSAR
                         </button>
                     </a>
@@ -260,7 +265,8 @@
                         <p class="formulario-preencher">
                             Pode deixar seu WhatsApp aqui.
                         </p>
-                        <input type="text" inputmode="numeric" name="number" placeholder="(00) 00000-0000" id="celular" value="" required>
+                        <input type="text" inputmode="numeric" name="number" placeholder="(00) 0 0000-0000" id="celular"
+                            value="" required>
                         <p class="formulario-preencher">
                             O que você gostaria de conversar?
                         </p>
@@ -285,4 +291,5 @@
         particlesJS.load('particles-container', 'particlesjs-config.json');
     </script>
 </body>
+
 </html>

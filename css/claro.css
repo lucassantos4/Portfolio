@@ -15,15 +15,18 @@
     --topicos: "BBH Sans Bogle" , Arial, Helvetica, sans-serif ;
     --texto: "Open Sans" , Arial, Helvetica, sans-serif ;
 }
+#menucontainer{
+    display: none;
+}
 .circle{
     height: 24px;
     width: 24px;
     border-radius: 24px;
-    background-color: var(--branco);
+    background-color: var(--preto);
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 4;
+    z-index: 6;
     pointer-events: none;
 }
 canvas{ 
@@ -48,8 +51,8 @@ h1 , p , h2{
 }
 
 main{
-    background-color: var(--preto);
-    color: var(--branco);
+    background-color: var(--branco);
+    color: var(--preto);
     position: relative;
     pointer-events: none;
     padding-bottom:30px ;
@@ -59,15 +62,14 @@ header{
     justify-content: center;
     width: 100%;
     height: auto;
-    background:var(--preto);
-    color: var(--branco);
+    background:var(--branco);;
     padding: 10px 0px;
     font: 400 1rem var(--topicos);
     position: relative;
     z-index: 3;
 }
 #menu{
-    color: var(--preto);
+    color: var(--branco);
     display: none;
 }
 #menucontainer{
@@ -103,7 +105,7 @@ nav{
 }
 #navlistfloating a{
     text-decoration: none; 
-    color: var(--branco); 
+    color: var(--preto); 
 }
 #navlist {
     display: flex;
@@ -118,29 +120,30 @@ nav{
     list-style-type: none;
 }
 #navlist a{
-    color: var(--branco);
+    color: var(--preto);
     text-decoration: none;
     transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
     
 }
 #navlist a:hover{
     margin: 0px 10px;
-    color: var(--preto);
-    background-color: var(--branco);
+    color: var(--branco);
+    background-color: var(--preto);
     border-radius: 2px;
     cursor: none;
 }
 
 #hr{
-    color: var(--branco);
-    box-shadow: 2px 2px 5px var(--preto);
+   background-color: var(--preto);
+    height: 2px;
+    border: none;    
 }
 
 .bg{
     width: 100%;
     height: 100vh;
     display: flex;
-    background:  linear-gradient(to bottom, var(--preto-degrade), var(--preto)) , url('../assets/bg.jpg') ;
+    background: url('../assets/bg.jpg') ;
     background-size: cover;
     background-repeat: no-repeat;
     cursor: default;
@@ -148,6 +151,7 @@ nav{
     z-index: 2;
 }
 #landingpage{
+    background:  linear-gradient(to bottom, transparent, var(--branco)) ;
     display: flex;
     width: 100%;
     overflow: hidden;
@@ -155,26 +159,28 @@ nav{
     z-index: 0;
     
 }
-.nome{
+#nome{
     pointer-events: none;
     font: 400 150px var(--topicos);
     margin: 0rem 10rem 0rem 1rem ;
     color: var(--branco);
     text-shadow: 4px 4px 19px var(--preto);
-    z-index: 4;
+    z-index: 2;
 }
 #aboutme{
     margin: auto 15%;
     width: fit-content;
     position: relative;
-    z-index: 4;
+    z-index: 2;
     position: relative;
 }
 #aboutme p{
     pointer-events: none;
-    padding: 6px 15px  10px 15px;
+ 
     font: 400 20px var(--texto);
     color: var(--branco);
+    background-color: #0000005e;
+    backdrop-filter: blur(5px);
     border-radius: 2px;
     z-index: 3;
     position: relative;
@@ -195,8 +201,7 @@ nav{
 #socialmidiascontainer{
     width: 100%;
     padding: 10px ;
-    background: var(--preto-degrade);
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(3px);
     box-shadow: 1px 1px 5px var(--preto);
     pointer-events: all;
     z-index: 4;
@@ -226,8 +231,8 @@ nav{
     width: 100%;
     font: 400 16px arial;
     padding: 10px;
-    color: var(--branco);
-    background-color: var(--preto);
+    color: var(--preto);
+    background-color: var(--branco);
     border: solid 1px var(--preto);
     box-shadow: 1px 1px 5px var(--preto-degrade);
     border-radius: 1px;
@@ -236,14 +241,14 @@ nav{
 }
 
 .socialmediasbutton:hover{
-    color: #000;
-    background-color: var(--branco) ;
+    color: var(--branco);
+    background-color: var(--preto) ;
 }
 #myprojects{
     margin-top: 200px;
     padding: 10px 0px 100px 0px;
     height: fit-content;
-    color: var(--branco);
+    color: var(--preto);
 }
 #myprojects > h1 {
     text-align: center;
@@ -290,21 +295,21 @@ nav{
 }
 #about{
     background-color: var(--branco);
-    border: solid var(--verdeclaro);
     border-right: 4px;
     border-left: 4px;
     align-items: center;
-    box-shadow: 1px 1px 5px #0000007e;
     pointer-events: all;
-    cursor: auto;
     z-index: 2;
     position: relative;
+}
+#about:hover{
+    box-shadow:  0px 0px 10px var(--preto-degrade);
 }
 #aboutcontainer{
     display: flex;
     margin:  auto;
     width: 80%;
-    padding: 5vh 20px 0px 20px;
+    padding: 5vh 20px 5vh 20px;
     z-index: 2;
 }
 #quemsou{
@@ -363,10 +368,10 @@ nav{
     pointer-events: none;
     height: 100%;
     width: 100%;
+    border-radius: 50%;
 }
 #skills{
     padding: 100px 0px;
-    
 }
 #skillsbox > h1{
     text-align: center;
@@ -376,7 +381,7 @@ nav{
 
 #skillsbox{
     margin: 0px auto;
-    color: var(--branco);
+    color: var(--preto);
     width: fit-content;
     padding: 20px;
 }
@@ -388,12 +393,11 @@ nav{
     height: fit-content;
 }
 .myskills{
-    background-color: var(--branco-degrade);
+    background-color: var(--preto-degrade);
     text-align: center;
     margin: 10px;
     width: 95px;
     height: fit-content;
-    font: 400 11px var(--topicos);
     transition: all 0.5s ease;
     box-shadow: 2px 2px 5px var(--preto-degrade);
     pointer-events: all;
@@ -425,16 +429,16 @@ nav{
 }
 .porcentagembar{
     border-radius: 10px;
-    font: 400 0.8em var(--texto);
+    font: 400 0.8 var(--texto);
     text-indent: 10px;
     display: flex;
     margin: auto;
-    background-color: var(--branco-degrade);
+    background-color: var(--preto-degrade);
     width: 100%;
     margin: 10px 0px ;
 }
 #porcentagembar-html{
-    padding-right: 1%   ;
+    padding-right: 1%;
     width: 90%;
     border-radius: 35px;
     background-color: var(--verdeclaro);
@@ -465,13 +469,12 @@ nav{
     padding: 5px 0px;
 }
 #mapscontainer{
-    background-color: var(--branco);
     text-align: center;
     color: var(--preto);
     font: 400 20px var(--topicos);
     margin: auto;
     width: 30%;
-    border: solid 4px var(--verdeclaro);
+
     border-radius: 5px;
     pointer-events: all;
     z-index: 2;
@@ -485,7 +488,6 @@ iframe{
     margin: 0px auto;
     width:  30%;
     padding: 20px;
-    border: solid 4px var(--verdeclaro);
     border-radius: 5px;
     pointer-events: all;
     z-index: 2;
@@ -550,8 +552,8 @@ textarea{
     margin: 10px 5px;
 }
 footer{
-    background-color: var(--branco);
-    color: var(--preto);
+    background-color: var(--preto);
+    color: var(--branco);
     font: 600 7px var(--texto);
     text-align: center;
     padding: 10px;
@@ -573,6 +575,17 @@ footer{
     }
     .circle{
         display: none;
+    }
+    #menucontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu{
+        height: 3px;
+        margin: 2px;
+        width: 24px;
+        background-color: var(--preto);
+
     }
     #menu{
         display: flex;
@@ -596,7 +609,7 @@ footer{
         padding: 5px;
     }
     #navlistfloating a{
-        background-color: var(--preto);
+        background-color: var(--branco-degrade);
         margin: 4px;
         height: fit-content;
         border-radius: 2px;
@@ -626,7 +639,7 @@ footer{
         width: 100%;
         margin-top: 10%;
     }
-    .nome{
+    #nome{
         margin: 0px;
         padding: 0px;
         font-size: 5.8em;
@@ -670,11 +683,14 @@ footer{
         color: var(--branco);
         
     }
+    #about{
+        padding: 20px 0px;
+    }
     #aboutcontainer{
         display: grid;
         width: 80%;
         margin: auto;
-        padding: 10vh 0px;
+        padding: 10vh 0vh;
     }
     #fotopessoalcontainer{
         display: flex;
