@@ -361,9 +361,17 @@ animateCircles();
         skillObserver.observe(skillsSection);
     }
 
-    // Tilt effect on project cards with enhanced responsiveness
+    // Tilt effect on project cards - throttled with requestAnimationFrame to reduce jank
     document.querySelectorAll('.projetos').forEach(card => {
         card.classList.add('tilt');
+        let rafId = null;
+        let lastTransform = '';
+
+        const applyTransform = () => {
+            card.style.transform = lastTransform;
+            rafId = null;
+        };
+
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
@@ -372,12 +380,21 @@ animateCircles();
             const cy = rect.height / 2;
             const dx = (x - cx) / cx;
             const dy = (y - cy) / cy;
-            const tiltX = (dy * 8).toFixed(2);
-            const tiltY = (-dx * 8).toFixed(2);
-            const scale = (1 + Math.sqrt(dx*dx + dy*dy) * 0.02).toFixed(3);
-            card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${scale})`;
+
+            const maxAngle = 6; // slightly less aggressive than 8
+            const tiltX = (dy * maxAngle).toFixed(2);
+            const tiltY = (-dx * maxAngle).toFixed(2);
+            const scale = (1 + Math.sqrt(dx*dx + dy*dy) * 0.015).toFixed(3);
+
+            lastTransform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${scale})`;
+
+            if (!rafId) rafId = requestAnimationFrame(applyTransform);
         });
+
         card.addEventListener('mouseleave', () => {
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = null;
+            lastTransform = '';
             card.style.transform = '';
         });
     });

@@ -45,23 +45,36 @@
     70% { box-shadow: 0 0 0 10px rgba(120, 150, 160, 0); }
     100% { box-shadow: 0 0 0 0 rgba(120, 150, 160, 0); }
 }
-.projetos:hover {
-    animation: pulse-glow 1.5s infinite;
+
+/* Lightweight hover state: prefer transforms and box-shadow (GPU-friendly).
+   Avoid infinite animations that force continuous repaints. Use scale-only
+   on images (no translateY) to prevent clipping/disappearance. */
+.projetos{
+    will-change: transform, box-shadow;
+    transition: transform 260ms cubic-bezier(.2,.9,.2,1), box-shadow 260ms ease, background-color 260ms ease;
+}
+.projetos:hover{
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 26px rgba(0,0,0,0.14);
 }
 
 .tilt{
     transform-style: preserve-3d;
-    perspective: 1200px;
-    transition: transform 200ms ease-out;
+    perspective: 1000px;
+    transition: transform 180ms ease-out;
     will-change: transform;
 }
 
 .projetos img{
-    transition: transform 450ms cubic-bezier(.2,.9,.2,1), filter 450ms;
+    transition: transform 360ms cubic-bezier(.2,.9,.2,1), filter 360ms;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 .projetos:hover img{
-    transform: translateY(-8px) scale(1.03);
-    filter: drop-shadow(0 12px 24px rgba(0,0,0,0.3));
+    transform: scale(1.03);
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.22));
 }
 
 .porcentagembar > div{

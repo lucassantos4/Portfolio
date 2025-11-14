@@ -258,7 +258,7 @@ nav{
     text-align: center;
     font: 400 20px var(--texto); 
 }
-#projetoscontainer{
+ #projetoscontainer{
     display: flex;
     margin: auto;
     width: 80%;
@@ -291,6 +291,7 @@ nav{
     filter: drop-shadow( 1px 1px 3px var(--preto-degrade) );
     border-radius: 2px;
     width: 100%;
+    overflow: hidden; /* ensure scaled images don't escape card */
 }
 #about{
     overflow: hidden;
