@@ -289,6 +289,160 @@ function animateCircles(){
     requestAnimationFrame(animateCircles);
 }
 animateCircles();
+
+/* ===== Scroll reveal, skills animation, tilt and parallax ===== */
+(function(){
+    // add floating to some cursor circles for subtle motion
+    try{
+        document.querySelectorAll('.circle').forEach((c,i)=>{ if(i % 2 === 0) c.classList.add('floating'); });
+    }catch(e){/* ignore */}
+
+    // reveal targets (add reveal class so CSS transitions apply)
+    const defaultTargets = ['#nome', '#myprojects', '#about', '#skills', '#formulariodecontato'];
+    const targets = defaultTargets.map(s => document.querySelector(s)).filter(Boolean);
+    targets.forEach(el => el.classList.add('reveal'));
+
+    // Add heading reveal class to all h1, h2 inside sections
+    document.querySelectorAll('#myprojects > h1, #about > div > article > h1, #skillsbox > h1').forEach(heading => {
+        heading.classList.add('reveal-heading');
+    });
+
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    targets.forEach(t => revealObserver.observe(t));
+
+    // Reveal headings with higher threshold
+    const headingObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('.reveal-heading').forEach(h => headingObserver.observe(h));
+
+    // Skills: animate inner bars when visible
+    const skillsSection = document.getElementById('skills');
+    if (skillsSection) {
+        // prepare bars to 0 width
+        document.querySelectorAll('.porcentagembar > div').forEach(bar => {
+            bar.style.width = '0%';
+        });
+
+        const skillObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // animate bars
+                    document.querySelectorAll('.porcentagembar > div').forEach(bar => {
+                        const h = bar.querySelector('h1');
+                        let target = 0;
+                        if (h) target = parseInt(h.textContent.replace('%','')) || 0;
+                        bar.style.width = target + '%';
+                    });
+                    
+                    // bounce skill icons with stagger
+                    document.querySelectorAll('.myskills').forEach((skill, idx) => {
+                        setTimeout(() => {
+                            skill.classList.add('reveal-item');
+                        }, idx * 80);
+                    });
+                    
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        skillObserver.observe(skillsSection);
+    }
+
+    // Tilt effect on project cards with enhanced responsiveness
+    document.querySelectorAll('.projetos').forEach(card => {
+        card.classList.add('tilt');
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const cx = rect.width / 2;
+            const cy = rect.height / 2;
+            const dx = (x - cx) / cx;
+            const dy = (y - cy) / cy;
+            const tiltX = (dy * 8).toFixed(2);
+            const tiltY = (-dx * 8).toFixed(2);
+            const scale = (1 + Math.sqrt(dx*dx + dy*dy) * 0.02).toFixed(3);
+            card.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${scale})`;
+        });
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+        });
+    });
+
+    // Parallax effect on personal photo (fotopessoal) when hovering over about section
+    const fotopessoal = document.getElementById('fotopessoal');
+    const aboutSection = document.getElementById('about');
+    if (fotopessoal && aboutSection && window.matchMedia('(min-width:900px)').matches) {
+        fotopessoal.classList.add('parallax-bg');
+        let rafId = null;
+        let tx = 0, ty = 0;
+        aboutSection.addEventListener('mousemove', (e) => {
+            const rect = aboutSection.getBoundingClientRect();
+            const relX = e.clientX - rect.left;
+            const relY = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const nx = ((relX - centerX) / centerX) * 12;
+            const ny = ((relY - centerY) / centerY) * 12;
+            tx = nx; ty = ny;
+            if (rafId) cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(() => {
+                fotopessoal.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
+            });
+        });
+        aboutSection.addEventListener('mouseleave', () => {
+            if (rafId) cancelAnimationFrame(rafId);
+            fotopessoal.style.transform = 'translate3d(0, 0, 0)';
+        });
+    }
+
+    // Header hide on scroll down, show on scroll up with smooth transition
+    (function(){
+        const header = document.getElementById('header');
+        if(!header) return;
+        let last = window.scrollY || 0;
+        let ticking = false;
+        header.style.transition = 'transform 300ms ease';
+        window.addEventListener('scroll', () => {
+            const current = window.scrollY || 0;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (current > last + 10) {
+                        header.style.transform = 'translateY(-100%)';
+                    } else if (current < last - 10) {
+                        header.style.transform = 'translateY(0)';
+                    }
+                    last = current;
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    })();
+
+    // Smooth button hover/active animations
+    document.querySelectorAll('button').forEach(btn => {
+        btn.addEventListener('mouseenter', function(e) {
+            this.style.transform = 'translateY(-2px)';
+        });
+        btn.addEventListener('mouseleave', function(e) {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+})();
  // MASCARA DE CELULAR NO FORMULÁRIO DE CONTATO
 var celular = window.document.getElementById("celular")
 celular.addEventListener("input", () => {
