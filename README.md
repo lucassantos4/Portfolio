@@ -81,7 +81,3 @@ Todos os direitos reservados. O conteúdo e o código neste repositório são de
 ## Autor
 
 Lucas Santos — desenvolvedor web. Mais informações e contatos estão no próprio site (link acima).
-
----
-
-Se quiser, aplico este README diretamente no arquivo (`readme.md`) do repositório. Posso também adicionar badges ou imagens (screenshots) se você fornecer os assets.
