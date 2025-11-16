@@ -41,6 +41,8 @@ nav{display:flex;align-items:center;align-self:center}#light-mode-buttonimg{widt
 #porcentagembar-html{padding-right:1%;width:90%;border-radius:35px;background-color:var(--verdeclaro);text-align:end}
 #porcentagembar-css{padding-right:1%;width:75%;border-radius:35px;background-color:var(--verdeclaro);text-align:end}
 #porcentagembar-javascript{padding-right:1%;width:60%;border-radius:35px;background-color:var(--verdeclaro);text-align:end}
+#porcentagembar-figma{padding-right:1%;width:60%;border-radius:35px;background-color:var(--verdeclaro);text-align:end}
+#porcentagembar-git{padding-right:1%;width:60%;border-radius:35px;background-color:var(--verdeclaro);text-align:end}
 #contact{margin:100px 0;display:flex}#mapslocalizacao{display:flex;margin:auto}#mapscontainer h1{padding:5px 0}
 #mapscontainer{text-align:center;color:var(--preto);font:400 20px var(--topicos);margin:auto;width:30%;border-radius:5px;pointer-events:all;z-index:2}
 iframe{width:100%}#formulariodecontato{background-color:var(--branco);color:var(--preto);margin:0 auto;width:30%;padding:20px;border-radius:5px;pointer-events:all;z-index:2}
