@@ -23,7 +23,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: var(--texto); /* Fonte padrão para leitura */
+  font-family: var(--texto); 
   -webkit-font-smoothing: antialiased;
 }
 
