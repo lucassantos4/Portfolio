@@ -1,6 +1,6 @@
 import React from 'react';
 import "./App.css"
-import { FaJava } from "react-icons/fa";
+import { FaJava , FaNodeJs} from "react-icons/fa";
 import { 
   SiSpringboot, 
   SiHibernate, 
@@ -34,7 +34,7 @@ const Portfolio = () => {
 
       
       <header className="hero-section">
-        <h1 className="hero-title">DESENVOLVEDOR <br/> FULL-STACK</h1>
+        <h1 className="hero-title">Desenvolvedor Web</h1>
         <p className="hero-subtitle">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
       </header>
 
@@ -85,10 +85,7 @@ const Portfolio = () => {
             <div className="project-info">
               <h3 className="project-name">TREINAMENTO CENCOSUD</h3>
               <p className="project-desc">
-                Plataforma digital associada a empresa <strong>Cencosud</strong> focada no treinamento de equipes, simulando decisões em ambiente real.
-                Atuei na definição da identidade visual, arquitetura e stack do <strong>front-end (React)</strong>, além da prototipação e
-                desenvolvimento das interfaces.Contribuí no <strong>back-end (Node.js/Prisma)</strong> com lógica de sessões e integração 
-                via API, apoiando a coesão entre as camadas do sistema.
+                Plataforma digital voltada ao treinamento de equipes, com simulação de tomada de decisões em cenários práticos. Atuei na definição da identidade visual e da stack do <strong>front-end (React)</strong>, além de estruturar as primeiras interfaces e estabelecer um padrão visual e técnico para o desenvolvimento do time. Também contribuí no <strong>back-end</strong> com<strong> Node.js</strong> e <strong>Prisma</strong>, implementando lógica de sessões e integração com APIs.
               </p>
             </div>
           </div>
@@ -102,7 +99,7 @@ const Portfolio = () => {
             <div className="project-info">
               <h3 className="project-name">Autenticacao web</h3>
               <p className="project-desc">
-                Sistema de autenticação web utilizando <strong>Java</strong> e <strong>Spring Boot</strong> para consolidar conhecimentos em desenvolvimento <strong>back-end</strong>. A aplicação gerencia o fluxo completo de usuários, incluindo cadastro, login, logout e proteção de rotas restritas, utilizando <strong>MySQL</strong> e <strong>Hibernate</strong> para a persistência dos dados. O projeto foi estruturado seguindo boas práticas de organização em camadas, focando na segurança e no controle eficiente de sessões.
+                Sistema de autenticação web desenvolvido com <strong>Java</strong> com <strong>Spring Boot</strong>, responsável pelo gerenciamento completo do ciclo de usuários <strong>(cadastro, login, logout e controle de acesso a rotas protegidas)</strong>. Persistência em <strong>MySQL</strong>, com abstração de acesso a dados via <strong>Hibernate (ORM)</strong> e mapeamento objeto-relacional. Estruturado em arquitetura em camadas, com separação de responsabilidades e implementação de controle de sessões no <strong>back-end</strong>.
               </p>
             </div>
           </div>
@@ -116,10 +113,10 @@ const Portfolio = () => {
           <div className="skills-content">
             <h2 className="skills-title">Minhas Skills</h2>
             <p className="skills-description">
-              Desenvolvimento com <strong>Java</strong> e tecnologias do ecossistema (<strong>Spring Boot</strong>, <strong>Hibernate</strong>), atuando na construção de soluções<strong> back-end</strong> com regras de negócio, persistência de dados e arquitetura em camadas. Experiência com <strong>Node.js</strong> e aplicações em <strong>React</strong> no <strong>front-end</strong>. Atuação em sistemas interativos e escaláveis, incluindo plataforma de simulação corporativa. Criação de interfaces com HTML e CSS como suporte ao desenvolvimento.
+              Desenvolvimento <strong>back-end</strong> em <strong>Java (Spring Boot)</strong>, com implementação de validações, controle de fluxo e persistência de dados em arquitetura em camadas. Experiência com <strong>Node.js</strong> no desenvolvimento de lógicas de sessão e controle de execução de partidas em aplicações interativas. Integração de <strong>APIs</strong> e versionamento com<strong> Git</strong> e <strong>GitHub</strong>. Desenvolvimento <strong>front-end</strong> com <strong>React</strong> e prototipação de interfaces no <strong>Figma (UI/UX)</strong>. Construção de interfaces com <strong>HTML</strong> e <strong>CSS</strong>.
             </p>
             <div className="capabilities-tags">
-              <span >JAVA (SPRINGBOOT)</span> / <span>HIBERNATE </span> / <span>NODE.JS</span> / <span>REACT & JSX</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>ENGENHARIA DE SOFTWARE</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
+              <span >JAVA (SPRINGBOOT)</span> / <span>HIBERNATE </span> / <span>NODE.JS</span> / <span>REACT</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>ENGENHARIA DE SOFTWARE</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
             </div>
           </div>
 
@@ -131,7 +128,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <SiReact size={40} />
                 </div>
-                <span className="skill-name">React & JSX:</span>
+                <span className="skill-name">React</span>
               </div>
 
               <div className="skill-card">
@@ -143,17 +140,18 @@ const Portfolio = () => {
 
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
+                  <FaNodeJs size={40}/>
+                </div>
+                <span className="skill-name">NODE</span>
+              </div>
+
+              <div className="skill-card">
+                <div className="skill-icon-placeholder">
                   <SiSpringboot size={40} />
                 </div>
                 <span className="skill-name">SPRINGBOOT</span>
               </div>
 
-              <div className="skill-card">
-                <div className="skill-icon-placeholder">
-                  <SiHibernate size={40} />
-                </div>
-                <span className="skill-name">HIBERNATE</span>
-              </div>
 
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
@@ -173,7 +171,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <SiHtml5 size={40} /> <IoLogoCss3 size={40} />
                 </div>
-                <span className="skill-name">HtML/CSS</span>
+                <span className="skill-name">HTML/CSS</span>
               </div>
               
               <div className="skill-card">
@@ -211,12 +209,6 @@ const Portfolio = () => {
                 <span className="skill-name"> Metodologias Ageis </span>
               </div>
 
-              <div className="skill-card">
-                <div className="skill-icon-placeholder">
-                  <LuUsers size={40} />
-                </div>
-                <span className="skill-name"> Gestao de equipes </span>
-              </div>
 
             </div>
           </div>
