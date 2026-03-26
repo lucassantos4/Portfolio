@@ -48,7 +48,7 @@ const Portfolio = () => {
             <h2 className="about-subtitle">QUEM EU SOU</h2>
             
             <p className="about-description">
-              <strong>Lucas Santos</strong>, estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas para o mercado. Atualmente, concentro meus estudos em <strong>Java (SpringBoot) </strong>, <strong>React</strong>, <strong>Javascript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
+              <strong>Lucas Santos</strong>, estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas para o mercado. Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>React</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
             </p>
 
             <a href="#contact" className="btn-talk">
@@ -70,7 +70,7 @@ const Portfolio = () => {
       <section id="projects" className="section projects-section">
         <div className="projects-header">
           <h2 className="section-title">MEUS PROJETOS</h2>
-          <p className="section-subtitle">Soluções digitais inovadoras que potencializam o crescimento do seu negócio.</p>
+          <p className="section-subtitle">Projetos focados no desenvolvimento de aplicações web e soluções práticas.</p>
         </div>
 
         <div className="projects-grid">
@@ -85,7 +85,7 @@ const Portfolio = () => {
             <div className="project-info">
               <h3 className="project-name">TREINAMENTO CENCOSUD</h3>
               <p className="project-desc">
-                Plataforma digital voltada ao treinamento de equipes, com simulação de tomada de decisões em cenários práticos. Atuei na definição da identidade visual e da stack do <strong>front-end (React)</strong>, além de estruturar as primeiras interfaces e estabelecer um padrão visual e técnico para o desenvolvimento do time. Também contribuí no <strong>back-end</strong> com<strong> Node.js</strong> e <strong>Prisma</strong>, implementando lógica de sessões e integração com APIs.
+                Plataforma digital voltada ao treinamento de equipes, com simulação de tomada de decisões em cenários práticos. Atuei na definição da identidade visual e da stack do <strong>front-end</strong> com <strong>React</strong>, além de estruturar as primeiras interfaces e estabelecer um padrão visual e técnico para o desenvolvimento do time. Também contribuí no <strong>back-end</strong> com<strong> Node.js</strong> e <strong>Prisma</strong>, implementando lógica de sessões e integração com APIs.
               </p>
             </div>
           </div>
@@ -97,9 +97,9 @@ const Portfolio = () => {
               <img src={webapplogin} alt="App Login" className="project-screenshot" />
             </div>
             <div className="project-info">
-              <h3 className="project-name">Autenticacao web</h3>
+              <h3 className="project-name">Sistema de Login</h3>
               <p className="project-desc">
-                Sistema de autenticação web desenvolvido com <strong>Java</strong> com <strong>Spring Boot</strong>, responsável pelo gerenciamento completo do ciclo de usuários <strong>(cadastro, login, logout e controle de acesso a rotas protegidas)</strong>. Persistência em <strong>MySQL</strong>, com abstração de acesso a dados via <strong>Hibernate (ORM)</strong> e mapeamento objeto-relacional. Estruturado em arquitetura em camadas, com separação de responsabilidades e implementação de controle de sessões no <strong>back-end</strong>.
+                Sistema de autenticação web desenvolvido em <strong>Java</strong> com <strong>SpringBoot</strong>, responsável pelo gerenciamento completo do ciclo de usuários <strong>(cadastro, login, logout e controle de acesso a rotas protegidas)</strong>. Persistência em <strong>MySQL</strong>, com <strong>Hibernate</strong> como ORM para acesso a dados. Estruturado em arquitetura em camadas, com separação de responsabilidades e implementação de controle de sessões no <strong>back-end</strong>.
               </p>
             </div>
           </div>
@@ -113,10 +113,10 @@ const Portfolio = () => {
           <div className="skills-content">
             <h2 className="skills-title">Minhas Skills</h2>
             <p className="skills-description">
-              Desenvolvimento <strong>back-end</strong> em <strong>Java (Spring Boot)</strong>, com implementação de validações, controle de fluxo e persistência de dados em arquitetura em camadas. Experiência com <strong>Node.js</strong> no desenvolvimento de lógicas de sessão e controle de execução de partidas em aplicações interativas. Integração de <strong>APIs</strong> e versionamento com<strong> Git</strong> e <strong>GitHub</strong>. Desenvolvimento <strong>front-end</strong> com <strong>React</strong> e prototipação de interfaces no <strong>Figma (UI/UX)</strong>. Construção de interfaces com <strong>HTML</strong> e <strong>CSS</strong>.
+              Desenvolvimento <strong>back-end</strong> em <strong>Java (SpringBoot)</strong>, com implementação de validações, controle de fluxo e persistência de dados em arquitetura em camadas. Experiência com <strong>Node.js</strong> no desenvolvimento de lógicas de sessão e controle de execução de partidas em aplicações interativas. Integração de <strong>APIs</strong> e versionamento com<strong> Git</strong> e <strong>GitHub</strong>. Desenvolvimento <strong>front-end</strong> com <strong>React</strong> e prototipação de interfaces no <strong>Figma (UI/UX)</strong>. Construção de interfaces com <strong>HTML</strong> e <strong>CSS</strong>.
             </p>
             <div className="capabilities-tags">
-              <span >JAVA (SPRINGBOOT)</span> / <span>HIBERNATE </span> / <span>NODE.JS</span> / <span>REACT</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>ENGENHARIA DE SOFTWARE</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
+              <span >JAVA (SPRINGBOOT)</span> / <span>NODE.JS</span> / <span>REACT</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
             </div>
           </div>
 
