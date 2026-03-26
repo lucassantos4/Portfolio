@@ -13,7 +13,7 @@ import {
   SiFigma 
 } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io5";
-import { LuUsers, LuLayers, LuKanban } from "react-icons/lu"; // Ícones de gestão/design
+import { LuUsers, LuLayers, LuKanban } from "react-icons/lu"; 
 import fotopessoal from "./assets/fotopessoal.png" 
 import webapplogin from "./assets/projetosimage/sistemaloginweb.png"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.png"
@@ -32,17 +32,17 @@ const Portfolio = () => {
         </ul>
       </nav>
 
-      {/* Hero Section */}
+      
       <header className="hero-section">
         <h1 className="hero-title">DESENVOLVEDOR <br/> FULL-STACK</h1>
         <p className="hero-subtitle">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
       </header>
 
-      {/* About Section */}
+      {/* About*/}
       <section id='about' className="about-section">
         <div className="about-container">
           
-          {/* Lado Esquerdo: Conteúdo */}
+      
           <div className="about-content">
             <h1 className="about-main-title">SOBRE MIM</h1>
             <h2 className="about-subtitle">QUEM EU SOU</h2>
@@ -56,7 +56,7 @@ const Portfolio = () => {
             </a>
           </div>
 
-          {/* Lado Direito: Foto */}
+       
           <div className="about-image-wrapper">
             <div className="photo-circle">
               <img src={fotopessoal} alt="Lucas Santos" style={{width: '100%', height: '100%', objectFit: 'cover'}}></img>
@@ -66,7 +66,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Projetos */}
       <section id="projects" className="section projects-section">
         <div className="projects-header">
           <h2 className="section-title">MEUS PROJETOS</h2>
@@ -79,7 +79,7 @@ const Portfolio = () => {
           {/* PROJETO 01 */}
           <div className="project-card">
             <div className="project-image-container mobile">
-              {/* Adicione sua imagem colorida aqui */}
+             
               <img src={cencosudtraining} alt="Cencosud image" className="project-screenshot" />
             </div>
             <div className="project-info">
@@ -96,7 +96,7 @@ const Portfolio = () => {
           {/* PROJETO 02 */}
           <div className="project-card">
             <div className="project-image-container mobile">
-              {/* Adicione sua imagem colorida aqui (formato celular) */}
+      
               <img src={webapplogin} alt="App Login" className="project-screenshot" />
             </div>
             <div className="project-info">
@@ -112,7 +112,7 @@ const Portfolio = () => {
 
       <section id='skills' className="skills-section">
         <div className="skills-container">
-          {/* Bloco de Texto: Capacitações e Experiência */}
+         
           <div className="skills-content">
             <h2 className="skills-title">Minhas Skills</h2>
             <p className="skills-description">
@@ -123,7 +123,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          {/* Bloco de Ícones: Tech Stack */}
+         
           <div className="skills-grid-wrapper">
             <div className="skills-grid">
 
@@ -223,7 +223,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact */}
       <section id="contact" className="section contact-section">
         <h2 className="section-title" style={{ textAlign: 'center' }}> ENTRE EM CONTATO CONTATO</h2>
         <div className="contact-links">

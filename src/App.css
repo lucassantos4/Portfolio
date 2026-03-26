@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
-  /* Suas definições de fonte */
+  
   --topicos: "BBH Sans Bogle", Arial, Helvetica, sans-serif;
   --texto: "Open Sans", Arial, Helvetica, sans-serif;
   
-  /* Cores e Variáveis de Estilo */
   --bg-color: #f4f4f4; 
   --text-color: #1a1a1a;
   --border-width: 3px;
@@ -28,7 +27,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Container Principal */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -72,7 +70,6 @@ body {
   padding: 0.2rem 0.5rem;
 }
 
-/* Hero Section */
 .hero-section {
   padding: 6rem 0;
   border-bottom: var(--border-width) solid var(--text-color);
@@ -98,7 +95,7 @@ body {
   font-weight: 500;
 }
 
-/* Seções Gerais */
+
 .section {
   padding: 4rem 0;
   border-bottom: var(--border-width) solid var(--text-color);
@@ -110,14 +107,14 @@ body {
   font-weight: 800;
 }
 
-/* Grid de Conteúdo (Sobre) */
+
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
 }
 
-/* --- Seção Sobre Mim --- */
+/* --- Sobre --- */
 
 .about-section {
   padding: 8rem 2rem;
@@ -133,13 +130,12 @@ body {
   gap: 4rem;
 }
 
-/* Coluna de Texto */
 .about-content {
   flex: 1;
 }
 
 .about-main-title {
-  font-family: var(--topicos); /* Fonte de Tópicos */
+  font-family: var(--topicos); 
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 900;
   line-height: 0.9;
@@ -157,12 +153,12 @@ body {
 }
 
 .about-description {
-  font-family: var(--texto); /* Fonte de Texto */
+  font-family: var(--texto);
   font-size: 1.1rem;
   line-height: 1.3;
   max-width: 550px;
   margin-bottom: 2.5rem;
-  color: #333; /* Cinza escuro para conforto visual */
+  color: #333;
 }
 
 .about-description strong {
@@ -170,7 +166,7 @@ body {
   color: var(--text-color);
 }
 
-/* Botão Brutalista */
+
 .btn-talk {
   display: inline-block;
   background-color: var(--text-color);
@@ -189,7 +185,7 @@ body {
   background-color: transparent;
   color: var(--text-color);
   transform: translate(-4px, -4px);
-  box-shadow: 6px 6px 0px var(--text-color); /* Sombra rígida brutalista */
+  box-shadow: 6px 6px 0px var(--text-color); 
 }
 
 /* Coluna da Foto */
@@ -207,7 +203,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--bg-color);
   font-family: var(--topicos);
   text-align: center;
   overflow: hidden;
@@ -216,10 +212,9 @@ body {
 /* --- Seção de Projetos Clean --- */
 
 .projects-section {
-  background-color: var(--bg-color); /* Fundo Branco Puro */
-  color: #000000; /* Texto Preto */
-  padding: 6rem 0;
-  border-bottom: var(--border-width) solid #000000;
+  background-color: var(--bg-color); 
+  color: var(--text-color); 
+  border-bottom: var(--border-width) solid var(--text-color);
 }
 
 .projects-header {
@@ -238,7 +233,7 @@ body {
 .section-subtitle {
   font-family: var(--texto);
   font-size: 1.1rem;
-  color: #444; /* Um cinza escuro para suavizar levemente a leitura */
+  color: #444; 
   margin-top: 0.5rem;
 }
 
@@ -252,7 +247,7 @@ body {
   padding: 0 2rem;
 }
 
-/* Cartão do Projeto Minimalista */
+
 .project-card {
   background-color: #ffffff;
   border: var(--border-width) solid #000000;
@@ -261,9 +256,9 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-/* Área da Imagem (Espaço para sua foto colorida) */
+
 .project-image-container {
-  background-color: #f0f0f0; /* Um cinza bem clarinho apenas para o placeholder */
+  background-color: #f0f0f0; 
   border-bottom: var(--border-width) solid #000000;
   display: flex;
   justify-content: center;
@@ -277,7 +272,7 @@ body {
 }
 
 .project-image-container.mobile {
-  aspect-ratio: 16 / 11; /* Ajustado para manter altura consistente no grid */
+  aspect-ratio: 16 / 11; 
   padding: 1.5rem;
 }
 
@@ -286,7 +281,7 @@ body {
   height: auto;
   display: block;
   
-  /* Quando você colocar a imagem colorida, ela ganhará destaque total aqui */
+ 
 }
 
 /* Informações do Projeto */
@@ -335,7 +330,7 @@ body {
   gap: 60px;
 }
 
-/* Bloco Superior: Texto e Capacitações */
+
 .skills-content {
   border-left: var(--border-width) solid var(--text-color);
   padding-left: 30px;
@@ -360,7 +355,7 @@ body {
     font-size: 0.7rem;
   }
 
-/* Bloco Inferior: Grid de Ícones */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -379,13 +374,13 @@ body {
   cursor: default;
 }
 
-/* Efeito Hover Brutalista */
+
 .skill-card:hover {
   transform: translate(-5px, -5px);
   box-shadow: 8px 8px 0px var(--text-color);
 }
 
-/* Espaço para os Ícones */
+
 .skill-icon-placeholder {
   width: 40px;
   height: 40px;
@@ -395,12 +390,12 @@ body {
   justify-content: center;
 }
 
-/* Ajuste para imagens/svgs dentro do placeholder */
+
 .skill-icon-placeholder img, 
 .skill-icon-placeholder svg {
   width: 100%;
   height: auto;
-  filter: grayscale(1); /* Mantém a estética sóbria */
+  filter: grayscale(1); 
 }
 
 .skill-card:hover .skill-icon-placeholder img {
@@ -445,7 +440,7 @@ body {
   font-weight: bold;
 }
 
-/* --- Ajustes de Responsividade --- */
+/* --- Responsividade --- */
 
 @media (max-width: 768px) {
   /* Configurações Globais */
@@ -469,7 +464,7 @@ body {
     justify-content: center;
   }
 
-  /* Hero Section - Corrigindo a largura fixa de 100vh */
+
   .hero-section {
     width: 100%; 
     height: auto;
@@ -495,7 +490,7 @@ body {
 
   /* Seção Sobre (About) */
   .about-container {
-    flex-direction: column-reverse; /* Foto em cima ou texto em cima conforme preferir */
+    flex-direction: column-reverse; 
     
     gap: 2rem;
     padding: 4rem 1rem;
@@ -516,7 +511,7 @@ body {
     margin-bottom: 2rem;
   }
 
-  /* Ajuste crucial para a imagem não estourar a tela */
+ 
   .photo-circle {
     width: 250px;
     height: 250px;
@@ -533,7 +528,7 @@ body {
     margin-bottom: 3rem;
   }
   .project-image-container.mobile {
-    aspect-ratio: 12 / 8  ; /* Ajustado para manter altura consistente no grid */
+    aspect-ratio: 12 / 8  ; 
     padding: 1rem;
   }
 
@@ -543,7 +538,7 @@ body {
   }
 
   .projects-grid {
-    grid-template-columns: 1fr; /* Força uma coluna */
+    grid-template-columns: 1fr; 
     gap: 1rem;
     padding: 0 0.5rem;
   }
@@ -584,11 +579,11 @@ body {
   /* Contato */
   .contact-item {
     font-size: 1.4rem;
-    word-break: break-all; /* Evita que o texto saia da tela se for muito longo */
+    word-break: break-all; 
   }
 
   .btn-talk {
-    width: 100%; /* Botão ocupa a largura toda no mobile */
+    width: 100%; 
     text-align: center;
   }
 }
