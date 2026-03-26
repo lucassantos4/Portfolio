@@ -119,14 +119,14 @@ const Portfolio = () => {
               Desenvolvimento com <strong>Java</strong> e tecnologias do ecossistema (<strong>Spring Boot</strong>, <strong>Hibernate</strong>), atuando na construção de soluções<strong> back-end</strong> com regras de negócio, persistência de dados e arquitetura em camadas. Experiência com <strong>Node.js</strong> e aplicações em <strong>React</strong> no <strong>front-end</strong>. Atuação em sistemas interativos e escaláveis, incluindo plataforma de simulação corporativa. Criação de interfaces com HTML e CSS como suporte ao desenvolvimento.
             </p>
             <div className="capabilities-tags">
-              <span>JAVA (SPRINGBOOT)</span> / <span>HIBERNATE (JPA)</span> / <span>NODE.JS</span> / <span>REACT & JSX</span> / <span>JAVASCRIPT (ES6+)</span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>ENGENHARIA DE SOFTWARE</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
+              <span >JAVA (SPRINGBOOT)</span> / <span>HIBERNATE </span> / <span>NODE.JS</span> / <span>REACT & JSX</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>ENGENHARIA DE SOFTWARE</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
             </div>
           </div>
 
           {/* Bloco de Ícones: Tech Stack */}
           <div className="skills-grid-wrapper">
             <div className="skills-grid">
-              {/* Repita este bloco para cada ícone */}
+
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiReact size={40} />

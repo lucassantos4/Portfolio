@@ -356,6 +356,9 @@ body {
   line-height: 1.6;
   margin-bottom: 25px;
 }
+.capabilities-tags{
+    font-size: 0.7rem;
+  }
 
 /* Bloco Inferior: Grid de Ícones */
 .skills-grid {
@@ -568,6 +571,14 @@ body {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
     padding: 5px;
+  }
+
+  .skills-description {
+    font-size: 0.8rem;
+  }
+
+  .capabilities-tags{
+    font-size: 0.6rem;
   }
 
   /* Contato */
