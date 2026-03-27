@@ -1,0 +1,106 @@
+/* ===================================
+   Skills Section
+   =================================== */
+
+.skills-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 100px 20px;
+  border-bottom: var(--border-width) solid var(--text-color);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.skills-content {
+  border-left: var(--border-width) solid var(--text-color);
+  padding-left: 30px;
+}
+
+.skills-title {
+  font-family: var(--topicos);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  line-height: 1;
+}
+
+.skills-description {
+  font-family: var(--texto);
+  font-size: 1.15rem;
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: var(--muted);
+}
+
+.capabilities-tags {
+  font-size: 0.7rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 110px);
+  gap: 15px;
+  justify-content: center;
+}
+
+.skill-card {
+  background-color: transparent;
+  border: var(--border-width) solid var(--text-color);
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  cursor: default;
+  aspect-ratio: 1 / 1;
+}
+
+.skill-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px 0px var(--accent);
+  border-color: var(--accent);
+}
+
+.skill-icon-placeholder {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-icon-placeholder img, 
+.skill-icon-placeholder svg {
+  width: 100%;
+  height: auto;
+  filter: grayscale(1); 
+}
+
+.skill-card:hover .skill-icon-placeholder img {
+  filter: grayscale(0) brightness(1.1);
+}
+
+.skill-card:hover .skill-name {
+  color: var(--accent);
+}
+
+.skill-name {
+  font-family: var(--topicos);
+  font-weight: 400;
+  font-size: 0.65rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: var(--transition);
+  text-align: center;
+  line-height: 1.3;
+  word-break: break-word;
+}

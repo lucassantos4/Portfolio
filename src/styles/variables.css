@@ -1,0 +1,18 @@
+/* ===================================
+   Design Tokens & Variables
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --topicos: "BBH Sans Bogle", Arial, Helvetica, sans-serif;
+  --texto: "Open Sans", Arial, Helvetica, sans-serif;
+  
+  --bg-color: #f2f0ed; 
+  --text-color: #111111;
+  --accent: #C8102E;
+  --card-bg: #ffffff;
+  --muted: #555;
+  --border-width: 2.5px;
+  --transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}

@@ -1,0 +1,106 @@
+/* ===================================
+   Scroll Reveal — Creative Animations
+   =================================== */
+
+/* --- Base State (hidden before reveal) --- */
+.reveal {
+  opacity: 0;
+  will-change: transform, opacity, filter;
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+    clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Revealed State --- */
+.reveal.revealed {
+  opacity: 1;
+  transform: none !important;
+  filter: blur(0) !important;
+  clip-path: inset(0 0 0 0) !important;
+}
+
+/* ===================================
+   Direction Variants
+   =================================== */
+
+/* Slide up with slight blur */
+.reveal-up {
+  transform: translateY(60px);
+  filter: blur(4px);
+}
+
+/* Drop from above */
+.reveal-down {
+  transform: translateY(-50px);
+  filter: blur(3px);
+}
+
+/* Slide from left with rotation */
+.reveal-left {
+  transform: translateX(-80px) rotate(-2deg);
+}
+
+/* Slide from right with rotation */
+.reveal-right {
+  transform: translateX(80px) rotate(2deg);
+}
+
+/* Scale up from smaller */
+.reveal-scale {
+  transform: scale(0.7);
+  filter: blur(6px);
+}
+
+/* Wipe reveal (clip-path curtain) */
+.reveal-wipe {
+  clip-path: inset(0 100% 0 0);
+  transform: none;
+}
+
+/* Diagonal slide-in */
+.reveal-diagonal {
+  transform: translate(-40px, 40px) skewY(2deg);
+}
+
+/* Flip in from X axis */
+.reveal-flip {
+  transform: perspective(800px) rotateX(25deg) translateY(30px);
+  transform-origin: bottom center;
+}
+
+/* Split reveal — elements spread from center */
+.reveal-spread {
+  transform: scaleX(0.3);
+  filter: blur(8px);
+}
+
+/* ===================================
+   Staggered Delays (for grids/lists)
+   =================================== */
+.reveal-delay-1  { transition-delay: 0.06s; }
+.reveal-delay-2  { transition-delay: 0.12s; }
+.reveal-delay-3  { transition-delay: 0.18s; }
+.reveal-delay-4  { transition-delay: 0.24s; }
+.reveal-delay-5  { transition-delay: 0.30s; }
+.reveal-delay-6  { transition-delay: 0.36s; }
+.reveal-delay-7  { transition-delay: 0.42s; }
+.reveal-delay-8  { transition-delay: 0.48s; }
+.reveal-delay-9  { transition-delay: 0.54s; }
+.reveal-delay-10 { transition-delay: 0.60s; }
+.reveal-delay-11 { transition-delay: 0.66s; }
+.reveal-delay-12 { transition-delay: 0.72s; }
+
+/* ===================================
+   Accessibility — Reduced Motion
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+}

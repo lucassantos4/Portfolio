@@ -1,0 +1,157 @@
+/* ===================================
+   Responsive Breakpoints
+   =================================== */
+
+@media (max-width: 768px) {
+  .container {
+    border-left: none;
+    border-right: none;
+    padding: 0 1.5rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Hero */
+  .hero-section {
+    width: 100%; 
+    height: auto;
+    min-height: 60vh;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-title {
+    height: auto;
+    text-align: center;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    padding-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    text-align: center;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  /* About */
+  .about-container {
+    flex-direction: column-reverse; 
+    gap: 2rem;
+    padding: 4rem 1rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .about-main-title {
+    font-size: 2.8rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .photo-frame {
+    width: 260px;
+    height: 320px;
+    margin: 0 auto;
+  }
+
+  .about-image-wrapper {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Projects */
+  .projects-header {
+    margin-bottom: 3rem;
+  }
+
+  .project-image-container.mobile {
+    aspect-ratio: 12 / 8;
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  /* Skills */
+  .skills-section {
+    padding: 40px 15px;
+  }
+  
+  .skill-card {
+    padding: 6px 4px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .skill-icon-placeholder {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 6px;
+  }
+  
+  .skill-name {
+    font-size: 0.5rem;
+    letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .skill-icon-placeholder img, 
+  .skill-icon-placeholder svg {
+    width: 100%;
+    height: auto;
+    filter: grayscale(1);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 70px);
+    gap: 8px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .skills-description {
+    font-size: 0.8rem;
+  }
+
+  .capabilities-tags {
+    font-size: 0.6rem;
+  }
+
+  /* Contact */
+  .contact-item {
+    font-size: 1.4rem;
+    word-break: break-all; 
+  }
+
+  .btn-talk {
+    width: 100%; 
+    text-align: center;
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import "./App.css"
+import "./styles/index.css"
 import { FaJava , FaNodeJs} from "react-icons/fa";
 import { 
   SiSpringboot, 
@@ -17,6 +17,7 @@ import { LuUsers, LuLayers, LuKanban } from "react-icons/lu";
 import fotopessoal from "./assets/fotopessoal.png" 
 import webapplogin from "./assets/projetosimage/sistemaloginweb.png"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.png"
+import { ScrollReveal } from "./components/ScrollReveal"
 
 const Portfolio = () => {
   return (
@@ -34,8 +35,12 @@ const Portfolio = () => {
 
       
       <header className="hero-section">
-        <h1 className="hero-title">Desenvolvedor Web</h1>
-        <p className="hero-subtitle">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
+        <ScrollReveal direction="wipe">
+          <h1 className="hero-title">Desenvolvedor Web</h1>
+        </ScrollReveal>
+        <ScrollReveal direction="up" delay={3}>
+          <p className="hero-subtitle">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
+        </ScrollReveal>
       </header>
 
       {/* About*/}
@@ -44,9 +49,12 @@ const Portfolio = () => {
           
       
           <div className="about-content">
-            <h1 className="about-main-title">SOBRE MIM</h1>
-            <h2 className="about-subtitle">QUEM EU SOU</h2>
+            <ScrollReveal direction="diagonal">
+              <h1 className="about-main-title">SOBRE MIM</h1>
+              <h2 className="about-subtitle">QUEM EU SOU</h2>
+            </ScrollReveal>
             
+            <ScrollReveal direction="left" delay={2}>
             <p className="about-description">
               <strong>Lucas Santos</strong>, estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas para o mercado. Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>React</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
             </p>
@@ -54,29 +62,35 @@ const Portfolio = () => {
             <a href="#contact" className="btn-talk">
               VAMOS CONVERSAR
             </a>
+            </ScrollReveal>
           </div>
 
        
+          <ScrollReveal direction="flip">
           <div className="about-image-wrapper">
-            <div className="photo-circle">
-              <img src={fotopessoal} alt="Lucas Santos" style={{width: '100%', height: '100%', objectFit: 'cover'}}></img>
+            <div className="photo-frame">
+              <img src={fotopessoal} alt="Lucas Santos" />
             </div>
           </div>
+          </ScrollReveal>
 
         </div>
       </section>
 
       {/* Projetos */}
       <section id="projects" className="section projects-section">
+        <ScrollReveal direction="spread">
         <div className="projects-header">
           <h2 className="section-title">MEUS PROJETOS</h2>
           <p className="section-subtitle">Projetos focados no desenvolvimento de aplicações web e soluções práticas.</p>
         </div>
+        </ScrollReveal>
 
         <div className="projects-grid">
           
 
           {/* PROJETO 01 */}
+          <ScrollReveal direction="left" delay={1}>
           <div className="project-card">
             <div className="project-image-container mobile">
              
@@ -89,8 +103,10 @@ const Portfolio = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
 
           {/* PROJETO 02 */}
+          <ScrollReveal direction="right" delay={3}>
           <div className="project-card">
             <div className="project-image-container mobile">
       
@@ -103,6 +119,7 @@ const Portfolio = () => {
               </p>
             </div>
           </div>
+          </ScrollReveal>
 
         </div>
       </section>
@@ -110,6 +127,7 @@ const Portfolio = () => {
       <section id='skills' className="skills-section">
         <div className="skills-container">
          
+          <ScrollReveal direction="diagonal">
           <div className="skills-content">
             <h2 className="skills-title">Minhas Skills</h2>
             <p className="skills-description">
@@ -119,95 +137,119 @@ const Portfolio = () => {
               <span >JAVA (SPRINGBOOT)</span> / <span>NODE.JS</span> / <span>REACT</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
             </div>
           </div>
+          </ScrollReveal>
 
          
           <div className="skills-grid-wrapper">
             <div className="skills-grid">
 
+              <ScrollReveal direction="scale" delay={1}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiReact size={40} />
                 </div>
                 <span className="skill-name">React</span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={2}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <FaJava size={40}/>
                 </div>
                 <span className="skill-name">JAVA</span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={3}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <FaNodeJs size={40}/>
                 </div>
                 <span className="skill-name">NODE</span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={4}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiSpringboot size={40} />
                 </div>
                 <span className="skill-name">SPRINGBOOT</span>
               </div>
+              </ScrollReveal>
 
-
+              <ScrollReveal direction="scale" delay={5}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiPython size={40} />
                 </div>
                 <span className="skill-name">Python</span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={6}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiJavascript size={40} />
                 </div>
                 <span className="skill-name">JavaScript</span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={7}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiHtml5 size={40} /> <IoLogoCss3 size={40} />
                 </div>
                 <span className="skill-name">HTML/CSS</span>
               </div>
+              </ScrollReveal>
               
+              <ScrollReveal direction="scale" delay={8}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiMysql size={40} />
                 </div>
                 <span className="skill-name"> Modelagem de Dados (MySQL) </span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={9}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiGithub size={40} />
                 </div>
                 <span className="skill-name"> Versionamento (Git/GitHub) </span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={10}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <SiFigma size={40} />
                 </div>
                 <span className="skill-name"> UI/UX Design </span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={11}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <LuLayers size={40} />
                 </div>
                 <span className="skill-name"> Arquitetura de Sistemas </span>
               </div>
+              </ScrollReveal>
 
+              <ScrollReveal direction="scale" delay={12}>
               <div className="skill-card">
                 <div className="skill-icon-placeholder">
                   <LuKanban size={40} />
                 </div>
                 <span className="skill-name"> Metodologias Ageis </span>
               </div>
+              </ScrollReveal>
 
 
             </div>
@@ -217,11 +259,19 @@ const Portfolio = () => {
 
       {/* Contact */}
       <section id="contact" className="section contact-section">
-        <h2 className="section-title" style={{ textAlign: 'center' }}> ENTRE EM CONTATO CONTATO</h2>
+        <ScrollReveal direction="flip">
+          <h2 className="section-title" style={{ textAlign: 'center' }}> ENTRE EM CONTATO</h2>
+        </ScrollReveal>
         <div className="contact-links">
-          <a href="https://github.com/lucassantos4" className="contact-item" target='blank' >GITHUB</a>
-          <a href="https://www.linkedin.com/in/lucassantos4/" className="contact-item" target='blank'>LINKEDIN</a>
-          <a href="mailto:lucasnsntcontato@outlook.com" className="contact-item" target='blank'>EMAIL</a>
+          <ScrollReveal direction="wipe" delay={1}>
+            <a href="https://github.com/lucassantos4" className="contact-item" target='_blank' rel='noopener noreferrer'>GITHUB</a>
+          </ScrollReveal>
+          <ScrollReveal direction="wipe" delay={3}>
+            <a href="https://www.linkedin.com/in/lucassantos4/" className="contact-item" target='_blank' rel='noopener noreferrer'>LINKEDIN</a>
+          </ScrollReveal>
+          <ScrollReveal direction="wipe" delay={5}>
+            <a href="mailto:lucasnsntcontato@outlook.com" className="contact-item" target='_blank' rel='noopener noreferrer'>EMAIL</a>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -1,0 +1,30 @@
+/* ===================================
+   Hero Section
+   =================================== */
+
+.hero-section {
+  padding: 6rem 0;
+  border-bottom: var(--border-width) solid var(--text-color);
+  width: 100vh;
+  height: 100vh;
+}
+
+.hero-title {
+  display: flex;
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -3px;
+  justify-content: center; 
+  align-items: center;    
+  height: 50vh;  
+}
+
+.hero-subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 600px;
+}

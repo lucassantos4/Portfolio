@@ -1,0 +1,17 @@
+/* ===================================
+   Portfolio — Main Stylesheet Index
+   
+   Importa todos os módulos CSS na 
+   ordem correta de cascata.
+   =================================== */
+
+@import './variables.css';
+@import './base.css';
+@import './navbar.css';
+@import './hero.css';
+@import './about.css';
+@import './projects.css';
+@import './skills.css';
+@import './contact.css';
+@import './animations.css';
+@import './responsive.css';

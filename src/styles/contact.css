@@ -1,0 +1,30 @@
+/* ===================================
+   Contact & Footer
+   =================================== */
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: var(--transition);
+  position: relative;
+}
+
+.contact-item:hover {
+  padding-left: 1.5rem;
+  color: var(--accent);
+}
+
+.footer {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}

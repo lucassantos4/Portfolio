@@ -1,0 +1,118 @@
+/* ===================================
+   Projects Section
+   =================================== */
+
+.section {
+  padding: 4rem 0;
+  border-bottom: var(--border-width) solid var(--text-color);
+}
+
+.section-title {
+  font-family: var(--topicos);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.projects-section {
+  background-color: var(--bg-color); 
+  color: var(--text-color); 
+  border-bottom: var(--border-width) solid var(--text-color);
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-subtitle {
+  font-family: var(--texto);
+  font-size: 1.1rem;
+  color: var(--muted); 
+  margin-top: 0.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: var(--border-width) solid var(--text-color);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-image-container {
+  background-color: #f2f0ed; 
+  border-bottom: var(--border-width) solid var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.project-image-container img {
+  
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image-container.laptop {
+  aspect-ratio: 16 / 9;
+  padding: 1.5rem;
+}
+
+.project-image-container.mobile {
+  aspect-ratio: 16 / 11; 
+  padding: 1.5rem;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-info {
+  padding: 2rem;
+  background-color: var(--card-bg);
+}
+
+.project-name {
+  font-family: var(--topicos);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  color: var(--text-color);
+}
+
+.project-desc {
+  font-family: var(--texto);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.project-desc strong {
+  font-weight: 700;
+}
+
+.project-card:hover {
+  transform: translate(-6px, -6px);
+  box-shadow: 8px 8px 0px var(--accent);
+  border-color: var(--accent);
+}
