@@ -2,11 +2,13 @@
    Design Tokens & Variables
    =================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
   --topicos: "BBH Sans Bogle", Arial, Helvetica, sans-serif;
   --texto: "Open Sans", Arial, Helvetica, sans-serif;
+  --pixel-text: 'Jersey 10', cursive;
   
   --bg-color: #f2f0ed; 
   --text-color: #111111;

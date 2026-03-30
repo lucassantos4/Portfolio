@@ -2,11 +2,16 @@
    Responsive Breakpoints
    =================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container {
     border-left: none;
     border-right: none;
     padding: 0 1.5rem;
+  }
+
+  /* Hero - Hide entire hero-image section */
+  .hero-image {
+    display: none;
   }
 
   /* Navbar */
@@ -25,26 +30,44 @@
 
   /* Hero */
   .hero-section {
-    width: 100%; 
+    width: 80%; 
     height: auto;
-    min-height: 60vh;
     padding: 4rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-image: none;
+    height: 80vh;
+    
   }
 
   .hero-title {
     height: auto;
-    text-align: center;
+    justify-content: center;
     font-size: clamp(2.5rem, 8vw, 4rem);
-    padding-bottom: 20px;
+    margin: 0;
+    
   }
 
   .hero-subtitle {
+    display: flex;
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    
+  }
+
+  .hero-text {
     text-align: center;
     font-size: clamp(1rem, 4vw, 1.5rem);
+    justify-content: center;
   }
+
 
   /* About */
   .about-container {
@@ -96,6 +119,7 @@
   .projects-grid {
     grid-template-columns: 1fr; 
     gap: 1rem;
+    max-width: 500px;
     padding: 0 0.5rem;
   }
 

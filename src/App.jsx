@@ -18,8 +18,10 @@ import fotopessoal from "./assets/fotopessoal.png"
 import webapplogin from "./assets/projetosimage/sistemaloginweb.png"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.png"
 import { ScrollReveal } from "./components/ScrollReveal"
+import { BiFontSize } from 'react-icons/bi';
 
 const Portfolio = () => {
+
   return (
     <div className="container">
       {/* Header / Menu */}
@@ -35,12 +37,16 @@ const Portfolio = () => {
 
       
       <header className="hero-section">
-        <ScrollReveal direction="wipe">
-          <h1 className="hero-title">Desenvolvedor Web</h1>
-        </ScrollReveal>
-        <ScrollReveal direction="up" delay={3}>
-          <p className="hero-subtitle">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
-        </ScrollReveal>
+        <section className='Hero-description'>
+          <ScrollReveal direction="wipe">
+            <h1 className="hero-title">Lucas Santos</h1>
+            <h1 className="hero-subtitle">Desenvolvedor web</h1>
+          </ScrollReveal>
+          <ScrollReveal direction="up" delay={3}>
+            <p className="hero-text">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
+          </ScrollReveal>
+        </section>
+
       </header>
 
       {/* About*/}
@@ -56,7 +62,7 @@ const Portfolio = () => {
             
             <ScrollReveal direction="left" delay={2}>
             <p className="about-description">
-              <strong>Lucas Santos</strong>, estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, o que me permitiu desenvolver habilidades práticas para o mercado. Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>React</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
+              Meu nome é <strong>Lucas</strong>, sou <strong>desenvolvedor web</strong> e estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, neles desenvolvi habilidades práticas para o mercado.  Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>React</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
             </p>
 
             <a href="#contact" className="btn-talk">
