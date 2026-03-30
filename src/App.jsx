@@ -40,7 +40,7 @@ const Portfolio = () => {
         <section className='Hero-description'>
           <ScrollReveal direction="wipe">
             <h1 className="hero-title">Lucas Santos</h1>
-            <h1 className="hero-subtitle">Desenvolvedor web</h1>
+            <h2 className="hero-subtitle">Desenvolvedor web</h2>
           </ScrollReveal>
           <ScrollReveal direction="up" delay={3}>
             <p className="hero-text">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
@@ -56,8 +56,8 @@ const Portfolio = () => {
       
           <div className="about-content">
             <ScrollReveal direction="diagonal">
-              <h1 className="about-main-title">SOBRE MIM</h1>
-              <h2 className="about-subtitle">QUEM EU SOU</h2>
+              <h2 className="about-main-title">SOBRE MIM</h2>
+              <h3 className="about-subtitle">QUEM EU SOU</h3>
             </ScrollReveal>
             
             <ScrollReveal direction="left" delay={2}>
