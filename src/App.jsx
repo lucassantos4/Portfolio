@@ -25,7 +25,7 @@ const Portfolio = () => {
   return (
     <div className="container">
       {/* Header / Menu */}
-      <nav className="navbar">
+      <nav className="navbar" aria-label="Navegação principal">
         <div className="logo">PORTFÓLIO</div>
         <ul className="nav-links">
           <li><a href="#about">SOBRE</a></li>
@@ -35,7 +35,7 @@ const Portfolio = () => {
         </ul>
       </nav>
 
-      
+      <main>
       <header className="hero-section">
         <section className='Hero-description'>
           <ScrollReveal direction="wipe">
@@ -75,7 +75,7 @@ const Portfolio = () => {
           <ScrollReveal direction="flip">
           <div className="about-image-wrapper">
             <div className="photo-frame">
-              <img src={fotopessoal} alt="Lucas Santos" />
+              <img src={fotopessoal} alt="Lucas Santos - Desenvolvedor Web Full-Stack" />
             </div>
           </div>
           </ScrollReveal>
@@ -100,7 +100,7 @@ const Portfolio = () => {
           <div className="project-card">
             <div className="project-image-container mobile">
              
-              <img src={cencosudtraining} alt="Cencosud image" className="project-screenshot" />
+              <img src={cencosudtraining} alt="Plataforma de treinamento digital Cencosud - projeto de desenvolvimento web com React e Node.js" className="project-screenshot" />
             </div>
             <div className="project-info">
               <h3 className="project-name">TREINAMENTO CENCOSUD</h3>
@@ -116,7 +116,7 @@ const Portfolio = () => {
           <div className="project-card">
             <div className="project-image-container mobile">
       
-              <img src={webapplogin} alt="App Login" className="project-screenshot" />
+              <img src={webapplogin} alt="Sistema de login e autenticação web desenvolvido em Java com Spring Boot e MySQL" className="project-screenshot" />
             </div>
             <div className="project-info">
               <h3 className="project-name">Sistema de Login</h3>
@@ -282,8 +282,9 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
+      </main>
       <footer className="footer">
-        <p>© 2026 — TODOS OS DIREITOS RESERVADOS.</p>
+        <p>© 2026 Lucas Santos — Desenvolvedor Web Full-Stack. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
