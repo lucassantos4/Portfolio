@@ -28,44 +28,34 @@
     justify-content: center;
   }
 
-  /* Hero */
+  .nav-contact-wrapper {
+    position: relative;
+  }
+
+  .contact-dropdown {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .contact-dropdown.active {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Hero — Sculptural */
   .hero-section {
-    width: 80%; 
-    height: auto;
-    padding: 4rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    text-align: center;
-    background-image: none;
-    height: 80vh;
-    
+    min-height: 85vh;
   }
 
-  .hero-title {
-    height: auto;
-    justify-content: center;
-    font-size: clamp(2.5rem, 8vw, 4rem);
-    margin: 0;
-    
+  .hero-name-line {
+    font-size: clamp(4rem, 17vw, 9rem);
   }
 
-  .hero-subtitle {
-    display: flex;
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
-    
+  .hero-echo-text {
+    font-size: clamp(3.5rem, 18vw, 8rem);
   }
 
-  .hero-text {
-    text-align: center;
-    font-size: clamp(1rem, 4vw, 1.5rem);
-    justify-content: center;
+  .hero-name {
+    filter: url(#warp);
   }
 
 
@@ -177,5 +167,32 @@
   .btn-talk {
     width: 100%; 
     text-align: center;
+  }
+}
+
+/* ===================================
+   Small screens — Hero adjustments
+   =================================== */
+@media (max-width: 480px) {
+  .hero-section {
+    min-height: 75vh;
+  }
+
+  .hero-name-line {
+    font-size: clamp(3.5rem, 20vw, 5.5rem);
+    letter-spacing: -0.04em;
+  }
+
+  .hero-name {
+    line-height: 0.85;
+  }
+
+  .hero-echo-text {
+    font-size: clamp(3rem, 22vw, 5rem);
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
   }
 }

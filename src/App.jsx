@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./styles/index.css"
 import { FaJava , FaNodeJs} from "react-icons/fa";
 import { 
@@ -18,9 +18,11 @@ import fotopessoal from "./assets/fotopessoal.png"
 import webapplogin from "./assets/projetosimage/sistemaloginweb.png"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.png"
 import { ScrollReveal } from "./components/ScrollReveal"
+import HeroSection from "./components/HeroSection"
 import { BiFontSize } from 'react-icons/bi';
 
 const Portfolio = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <div className="container">
@@ -31,23 +33,26 @@ const Portfolio = () => {
           <li><a href="#about">SOBRE</a></li>
           <li><a href="#projects">PROJETOS</a></li>
           <li><a href="#skills">SKILLS</a></li>
-          <li><a href="#contact">CONTATO</a></li>
+          <li
+            className="nav-contact-wrapper"
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+            onFocus={() => setShowDropdown(true)}
+            onBlur={(e) => {
+              if (!e.currentTarget.contains(e.relatedTarget)) setShowDropdown(false);
+            }}
+          >
+            <a href="#contact">CONTATO</a>
+            <ul className={`contact-dropdown ${showDropdown ? 'active' : ''}`} role="menu" aria-label="Links de contato">
+              <li role="none"><a href="https://www.linkedin.com/in/lucasnsnt/" target="_blank" rel="noopener noreferrer" role="menuitem" tabIndex={0}>LinkedIn</a></li>
+              <li role="none"><a href="https://github.com/lucasnsnt/" target="_blank" rel="noopener noreferrer" role="menuitem" tabIndex={0}>GitHub</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
       <main>
-      <header className="hero-section">
-        <section className='Hero-description'>
-          <ScrollReveal direction="wipe">
-            <h1 className="hero-title">Lucas Santos</h1>
-            <h2 className="hero-subtitle">Desenvolvedor web</h2>
-          </ScrollReveal>
-          <ScrollReveal direction="up" delay={3}>
-            <p className="hero-text">Sou desenvolvedor e meu objetivo é criar soluções digitais que unem inovação, funcionalidade e experiência do usuário.</p>
-          </ScrollReveal>
-        </section>
-
-      </header>
+      <HeroSection />
 
       {/* About*/}
       <section id='about' className="about-section">
@@ -270,10 +275,10 @@ const Portfolio = () => {
         </ScrollReveal>
         <div className="contact-links">
           <ScrollReveal direction="wipe" delay={1}>
-            <a href="https://github.com/lucassantos4" className="contact-item" target='_blank' rel='noopener noreferrer'>GITHUB</a>
+            <a href="https://github.com/lucasnsnt/" className="contact-item" target='_blank' rel='noopener noreferrer'>GITHUB</a>
           </ScrollReveal>
           <ScrollReveal direction="wipe" delay={3}>
-            <a href="https://www.linkedin.com/in/lucassantos4/" className="contact-item" target='_blank' rel='noopener noreferrer'>LINKEDIN</a>
+            <a href="https://www.linkedin.com/in/lucasnsnt/" className="contact-item" target='_blank' rel='noopener noreferrer'>LINKEDIN</a>
           </ScrollReveal>
           <ScrollReveal direction="wipe" delay={5}>
             <a href="mailto:lucasnsntcontato@outlook.com" className="contact-item" target='_blank' rel='noopener noreferrer'>EMAIL</a>

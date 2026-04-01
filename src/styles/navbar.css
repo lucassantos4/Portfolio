@@ -26,6 +26,11 @@
   display: flex;
   list-style: none;
   gap: 2rem;
+  align-items: center;
+}
+
+.nav-links li {
+  list-style: none;
 }
 
 .nav-links a {
@@ -34,7 +39,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   position: relative;
-  padding: 0.2rem 0;
+  padding: 0.6rem 0.5rem;
   transition: var(--transition);
 }
 
@@ -55,4 +60,86 @@
 
 .nav-links a:hover {
   color: var(--accent);
+}
+
+/* ===================================
+   Contact Dropdown
+   =================================== */
+
+.nav-contact-wrapper {
+  position: relative;
+}
+
+/* Ponte invisível para manter hover entre o link e o dropdown */
+.nav-contact-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: transparent;
+}
+
+.contact-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  list-style: none;
+  background-color: var(--bg-color);
+  padding: 0.4rem 0;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(6px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.contact-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.contact-dropdown li {
+  padding: 0;
+}
+
+.contact-dropdown li a {
+  display: block;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Reutiliza o mesmo border-bottom accent da navbar */
+.contact-dropdown li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 1.2rem;
+  right: 1.2rem;
+  width: 0;
+  height: 2.5px;
+  background-color: var(--accent);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.contact-dropdown li a:hover::after,
+.contact-dropdown li a:focus::after {
+  width: calc(100% - 2.4rem);
+}
+
+.contact-dropdown li a:hover,
+.contact-dropdown li a:focus {
+  color: var(--accent);
+  outline: none;
 }
