@@ -30,7 +30,7 @@ const translations = {
         alt: "Plataforma de treinamento digital Cencosud - projeto de desenvolvimento web com React e Node.js",
         desc: (
           <>
-            Plataforma gamificada de simulação empresarial para treinamento no varejo com rodadas competitivas em tempo real. Liderei a definição da stack e identidade visual do <strong>front-end (React)</strong>, desenvolvendo páginas de configuração, lobby, sala de espera e painel de estratégia com services de integração. No <strong>back-end (Node.js, Express, Prisma),</strong> implementei a <strong>API REST</strong> com rotas de criação/gestão de salas, lógica de sessões com autenticação via token, motor de cálculo financeiro (CAPEX, custos, juros sobre excedente), <strong>validação</strong> de <strong>regras de negócio</strong>, sanitização de dados e comunicação em tempo real com <strong>Socket.IO</strong>.
+            Plataforma gamificada de simulação empresarial para varejo com rodadas em tempo real. Liderei a stack e identidade do <strong>front-end (React)</strong>, criando páginas de configuração, lobby e estratégia. No <strong>back-end (Node, Express, Prisma)</strong>, atuei na <strong>API REST</strong>, gestão de salas, <strong>sessões com tokens</strong> e <strong>motor financeiro</strong> (CAPEX, juros, custos). Implementei <strong>validação de regras</strong>, <strong>sanitização de dados</strong> e c<strong>omunicação em tempo real via Socket.IO</strong>.
           </>
         ),
       },
@@ -97,7 +97,7 @@ const translations = {
         alt: "Cencosud digital training platform - web development project with React and Node.js",
         desc: (
           <>
-            Gamified business simulation platform for retail training with competitive real-time rounds. I led the stack definition and visual identity of the <strong>front-end (React)</strong>, developing configuration pages, lobby, waiting room and strategy panel with integration services. On the <strong>back-end (Node.js, Express, Prisma),</strong> I implemented the <strong>REST API</strong> with room creation/management routes, session logic with token authentication, financial calculation engine (CAPEX, costs, surplus interest), <strong>business rules validation</strong>, data sanitization and real-time communication with <strong>Socket.IO</strong>.
+            Gamified business simulation for retail with real-time rounds. <strong>I led the front-end stack and UI (React)</strong>  , developing config pages, lobby, and strategy dashboards with integration services. On the <strong>back-end (Node, Express, Prisma)</strong>, I built the <strong>REST API</strong>, room management, <strong>token auth</strong>, and a <strong>financial engine</strong> (CAPEX, interest, costs). I also implemented <strong>business rules</strong>, data sanitization, and <strong>real-time communication</strong> using <strong>Socket.IO</strong>.
           </>
         ),
       },
