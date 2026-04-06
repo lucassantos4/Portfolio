@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import "./styles/index.css"
 import { FaJava , FaNodeJs} from "react-icons/fa";
 import { 
   SiSpringboot, 
-  SiHibernate, 
   SiJavascript, 
   SiHtml5, 
   SiReact,
@@ -13,26 +12,43 @@ import {
   SiFigma 
 } from "react-icons/si";
 import { IoLogoCss3 } from "react-icons/io5";
-import { LuUsers, LuLayers, LuKanban } from "react-icons/lu"; 
+import { LuLayers, LuKanban } from "react-icons/lu"; 
 import fotopessoal from "./assets/fotopessoal.png" 
 import webapplogin from "./assets/projetosimage/sistemaloginweb.png"
 import cencosudtraining from "./assets/projetosimage/cencosudtraining.png"
 import { ScrollReveal } from "./components/ScrollReveal"
 import HeroSection from "./components/HeroSection"
-import { BiFontSize } from 'react-icons/bi';
+import { useLanguage } from "./i18n/useLanguage"
 
 const Portfolio = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const { lang, t, toggleLang } = useLanguage();
+
+  const handleCvClick = (e) => {
+    e.preventDefault();
+    const cvUrl = `${import.meta.env.BASE_URL}Curriculo.pdf`;
+
+    const newTab = window.open(cvUrl, '_blank');
+    if (newTab) newTab.opener = null;
+
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Curriculo.pdf';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
 
   return (
     <div className="container">
       {/* Header / Menu */}
-      <nav className="navbar" aria-label="Navegação principal">
+      <nav className="navbar" aria-label={lang === 'pt' ? 'Navegação principal' : 'Main navigation'}>
         <div className="logo">PORTFÓLIO</div>
         <ul className="nav-links">
-          <li><a href="#about">SOBRE</a></li>
-          <li><a href="#projects">PROJETOS</a></li>
-          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="/Curriculo.pdf" onClick={handleCvClick}>{t.nav.cv}</a></li>
+          <li><a href="#about">{t.nav.about}</a></li>
+          <li><a href="#projects">{t.nav.projects}</a></li>
+          <li><a href="#skills">{t.nav.skills}</a></li>
           <li
             className="nav-contact-wrapper"
             onMouseEnter={() => setShowDropdown(true)}
@@ -42,11 +58,16 @@ const Portfolio = () => {
               if (!e.currentTarget.contains(e.relatedTarget)) setShowDropdown(false);
             }}
           >
-            <a href="#contact">CONTATO</a>
-            <ul className={`contact-dropdown ${showDropdown ? 'active' : ''}`} role="menu" aria-label="Links de contato">
+            <a href="#contact">{t.nav.contact}</a>
+            <ul className={`contact-dropdown ${showDropdown ? 'active' : ''}`} role="menu" aria-label={lang === 'pt' ? 'Links de contato' : 'Contact links'}>
               <li role="none"><a href="https://www.linkedin.com/in/lucasnsnt/" target="_blank" rel="noopener noreferrer" role="menuitem" tabIndex={0}>LinkedIn</a></li>
               <li role="none"><a href="https://github.com/lucasnsnt/" target="_blank" rel="noopener noreferrer" role="menuitem" tabIndex={0}>GitHub</a></li>
             </ul>
+          </li>
+          <li>
+            <button className="lang-toggle" onClick={toggleLang} aria-label={lang === 'pt' ? 'Mudar para inglês' : 'Switch to Portuguese'}>
+              {lang === 'pt' ? 'EN' : 'PT'}
+            </button>
           </li>
         </ul>
       </nav>
@@ -61,18 +82,23 @@ const Portfolio = () => {
       
           <div className="about-content">
             <ScrollReveal direction="diagonal">
-              <h2 className="about-main-title">SOBRE MIM</h2>
-              <h3 className="about-subtitle">QUEM EU SOU</h3>
+              <h2 className="about-main-title">{t.about.title}</h2>
+              <h3 className="about-subtitle">{t.about.subtitle}</h3>
             </ScrollReveal>
             
             <ScrollReveal direction="left" delay={2}>
             <p className="about-description">
-              Meu nome é <strong>Lucas</strong>, sou <strong>desenvolvedor web</strong> e estudante de <strong>Ciência da Computação</strong>, tenho experiência em projetos acadêmicos aplicados a empresas reais, neles desenvolvi habilidades práticas para o mercado.  Atualmente, concentro meus estudos em <strong>Java</strong>, <strong>React</strong>, <strong>JavaScript</strong> e tecnologias de <strong>desenvolvimento web</strong>. Busco diariamente aprimorar meu conhecimento técnico e contribuir de forma efetiva em   projetos.
+              {t.about.description}
             </p>
 
-            <a href="#contact" className="btn-talk">
-              VAMOS CONVERSAR
-            </a>
+            <div className="btn-talk-wrapper">
+              <a href="#contact" className="btn-talk">
+                {t.about.btnContact}
+              </a>
+              <a href="/Curriculo.pdf" onClick={handleCvClick} className="btn-talk btn-download">
+                {t.about.btnCv}
+              </a>
+            </div>
             </ScrollReveal>
           </div>
 
@@ -80,7 +106,7 @@ const Portfolio = () => {
           <ScrollReveal direction="flip">
           <div className="about-image-wrapper">
             <div className="photo-frame">
-              <img src={fotopessoal} alt="Lucas Santos - Desenvolvedor Web Full-Stack" />
+              <img src={fotopessoal} alt={t.about.imgAlt} />
             </div>
           </div>
           </ScrollReveal>
@@ -92,8 +118,8 @@ const Portfolio = () => {
       <section id="projects" className="section projects-section">
         <ScrollReveal direction="spread">
         <div className="projects-header">
-          <h2 className="section-title">MEUS PROJETOS</h2>
-          <p className="section-subtitle">Projetos focados no desenvolvimento de aplicações web e soluções práticas.</p>
+          <h2 className="section-title">{t.projects.title}</h2>
+          <p className="section-subtitle">{t.projects.subtitle}</p>
         </div>
         </ScrollReveal>
 
@@ -105,12 +131,12 @@ const Portfolio = () => {
           <div className="project-card">
             <div className="project-image-container mobile">
              
-              <img src={cencosudtraining} alt="Plataforma de treinamento digital Cencosud - projeto de desenvolvimento web com React e Node.js" className="project-screenshot" />
+              <img src={cencosudtraining} alt={t.projects.cencosud.alt} className="project-screenshot" />
             </div>
             <div className="project-info">
-              <h3 className="project-name">TREINAMENTO CENCOSUD</h3>
+              <h3 className="project-name">{t.projects.cencosud.name}</h3>
               <p className="project-desc">
-                Plataforma digital voltada ao treinamento de equipes, com simulação de tomada de decisões em cenários práticos. Atuei na definição da identidade visual e da stack do <strong>front-end</strong> com <strong>React</strong>, além de estruturar as primeiras interfaces e estabelecer um padrão visual e técnico para o desenvolvimento do time. Também contribuí no <strong>back-end</strong> com<strong> Node.js</strong> e <strong>Prisma</strong>, implementando lógica de sessões e integração com APIs.
+                {t.projects.cencosud.desc}
               </p>
             </div>
           </div>
@@ -121,12 +147,12 @@ const Portfolio = () => {
           <div className="project-card">
             <div className="project-image-container mobile">
       
-              <img src={webapplogin} alt="Sistema de login e autenticação web desenvolvido em Java com Spring Boot e MySQL" className="project-screenshot" />
+              <img src={webapplogin} alt={t.projects.login.alt} className="project-screenshot" />
             </div>
             <div className="project-info">
-              <h3 className="project-name">Sistema de Login</h3>
+              <h3 className="project-name">{t.projects.login.name}</h3>
               <p className="project-desc">
-                Sistema de autenticação web desenvolvido em <strong>Java</strong> com <strong>SpringBoot</strong>, responsável pelo gerenciamento completo do ciclo de usuários <strong>(cadastro, login, logout e controle de acesso a rotas protegidas)</strong>. Persistência em <strong>MySQL</strong>, com <strong>Hibernate</strong> como ORM para acesso a dados. Estruturado em arquitetura em camadas, com separação de responsabilidades e implementação de controle de sessões no <strong>back-end</strong>.
+                {t.projects.login.desc}
               </p>
             </div>
           </div>
@@ -140,12 +166,12 @@ const Portfolio = () => {
          
           <ScrollReveal direction="diagonal">
           <div className="skills-content">
-            <h2 className="skills-title">Minhas Skills</h2>
+            <h2 className="skills-title">{t.skills.title}</h2>
             <p className="skills-description">
-              Desenvolvimento <strong>back-end</strong> em <strong>Java (SpringBoot)</strong>, com implementação de validações, controle de fluxo e persistência de dados em arquitetura em camadas. Experiência com <strong>Node.js</strong> no desenvolvimento de lógicas de sessão e controle de execução de partidas em aplicações interativas. Integração de <strong>APIs</strong> e versionamento com<strong> Git</strong> e <strong>GitHub</strong>. Desenvolvimento <strong>front-end</strong> com <strong>React</strong> e prototipação de interfaces no <strong>Figma (UI/UX)</strong>. Construção de interfaces com <strong>HTML</strong> e <strong>CSS</strong>.
+              {t.skills.description}
             </p>
             <div className="capabilities-tags">
-              <span >JAVA (SPRINGBOOT)</span> / <span>NODE.JS</span> / <span>REACT</span> / <span>JAVASCRIPT </span> / <span>MODELAGEM DE DADOS (MYSQL)</span> / <span>GIT & GITHUB</span> / <span>UI/UX DESIGN</span>
+              {t.skills.tags}
             </div>
           </div>
           </ScrollReveal>
@@ -222,7 +248,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <SiMysql size={40} />
                 </div>
-                <span className="skill-name"> Modelagem de Dados (MySQL) </span>
+                <span className="skill-name"> {t.skills.items.mysql} </span>
               </div>
               </ScrollReveal>
 
@@ -231,7 +257,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <SiGithub size={40} />
                 </div>
-                <span className="skill-name"> Versionamento (Git/GitHub) </span>
+                <span className="skill-name"> {t.skills.items.git} </span>
               </div>
               </ScrollReveal>
 
@@ -240,7 +266,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <SiFigma size={40} />
                 </div>
-                <span className="skill-name"> UI/UX Design </span>
+                <span className="skill-name"> {t.skills.items.uiux} </span>
               </div>
               </ScrollReveal>
 
@@ -249,7 +275,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <LuLayers size={40} />
                 </div>
-                <span className="skill-name"> Arquitetura de Sistemas </span>
+                <span className="skill-name"> {t.skills.items.architecture} </span>
               </div>
               </ScrollReveal>
 
@@ -258,7 +284,7 @@ const Portfolio = () => {
                 <div className="skill-icon-placeholder">
                   <LuKanban size={40} />
                 </div>
-                <span className="skill-name"> Metodologias Ageis </span>
+                <span className="skill-name"> {t.skills.items.agile} </span>
               </div>
               </ScrollReveal>
 
@@ -271,7 +297,7 @@ const Portfolio = () => {
       {/* Contact */}
       <section id="contact" className="section contact-section">
         <ScrollReveal direction="flip">
-          <h2 className="section-title" style={{ textAlign: 'center' }}> ENTRE EM CONTATO</h2>
+          <h2 className="section-title" style={{ textAlign: 'center' }}>{t.contact.title}</h2>
         </ScrollReveal>
         <div className="contact-links">
           <ScrollReveal direction="wipe" delay={1}>
@@ -289,7 +315,7 @@ const Portfolio = () => {
       {/* Footer */}
       </main>
       <footer className="footer">
-        <p>© 2026 Lucas Santos — Desenvolvedor Web Full-Stack. Todos os direitos reservados.</p>
+        <p>{t.footer}</p>
       </footer>
     </div>
   );

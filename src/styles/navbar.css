@@ -143,3 +143,28 @@
   color: var(--accent);
   outline: none;
 }
+
+/* ===================================
+   Language Toggle Button
+   =================================== */
+
+.lang-toggle {
+  background: transparent;
+  color: var(--text-color);
+  border: var(--border-width) solid var(--text-color);
+  padding: 0.4rem 0.8rem;
+  font-family: var(--texto);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.lang-toggle:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--accent);
+}

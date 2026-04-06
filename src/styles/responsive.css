@@ -63,7 +63,6 @@
   .about-container {
     flex-direction: column-reverse; 
     gap: 2rem;
-    padding: 4rem 1rem;
   }
 
   .about-content {
@@ -72,19 +71,18 @@
     align-items: normal;
   }
 
-  .about-main-title {
-    font-size: 2.8rem;
-  }
-
   .about-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    max-width: 100%;
   }
 
   .photo-frame {
-    width: 260px;
-    height: 320px;
+    width: min(260px, 70vw);
     margin: 0 auto;
+  }
+
+  .photo-frame::before {
+    top: 14px;
+    left: 14px;
   }
 
   .about-image-wrapper {
@@ -194,5 +192,35 @@
   .hero-tagline {
     font-size: 0.8rem;
     letter-spacing: 0.15em;
+  }
+
+  /* About — Small screens */
+  .about-section {
+    padding: 3rem 1rem;
+  }
+
+  .btn-talk-wrapper {
+    flex-direction: column;
+  }
+
+  .btn-talk {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .photo-frame {
+    width: min(220px, 65vw);
+  }
+
+  .photo-frame::before {
+    top: 10px;
+    left: 10px;
+  }
+
+  .photo-frame::after {
+    width: 35px;
+    height: 35px;
+    bottom: -6px;
+    right: -6px;
   }
 }

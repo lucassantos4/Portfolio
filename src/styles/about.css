@@ -3,7 +3,7 @@
    =================================== */
 
 .about-section {
-  padding: 8rem 2rem;
+  padding: clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 2rem);
   border-bottom: var(--border-width) solid var(--text-color);
 }
 
@@ -13,16 +13,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: clamp(2rem, 4vw, 4rem);
 }
 
 .about-content {
   flex: 1;
+  min-width: 0;
 }
 
 .about-main-title {
   font-family: var(--topicos); 
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.2rem, 5vw, 5rem);
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -2px;
@@ -32,7 +33,7 @@
 
 .about-subtitle {
   font-family: var(--topicos);
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-weight: 800;
   margin-bottom: 1.5rem;
   text-transform: uppercase;
@@ -40,8 +41,8 @@
 
 .about-description {
   font-family: var(--texto);
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  line-height: 1.6;
   max-width: 550px;
   margin-bottom: 2.5rem;
   color: var(--muted);
@@ -52,15 +53,23 @@
   color: var(--text-color);
 }
 
+.btn-talk-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .btn-talk {
-  display: inline-block;
+  flex: 1 1 auto;
+  min-width: 140px;
+  text-align: center;
   background-color: var(--accent);
   color: #fff;
-  padding: 1.2rem 3rem;
+  padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.5rem, 3vw, 3rem);
   text-decoration: none;
   font-family: var(--texto);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
   text-transform: uppercase;
   transition: var(--transition);
   border: var(--border-width) solid var(--accent);
@@ -75,15 +84,15 @@
 }
 
 .about-image-wrapper {
-  flex: 1;
+  flex: 0 1 auto;
   display: flex;
   justify-content: flex-end;
 }
 
 .photo-frame {
   position: relative;
-  width: 400px;
-  height: 500px;
+  width: clamp(220px, 28vw, 400px);
+  aspect-ratio: 4 / 5;
 }
 
 /* Bloco decorativo atrás da foto */
@@ -105,8 +114,8 @@
   position: absolute;
   bottom: -10px;
   right: -10px;
-  width: 60px;
-  height: 60px;
+  width: clamp(40px, 5vw, 60px);
+  height: clamp(40px, 5vw, 60px);
   background-color: var(--accent);
   z-index: 3;
 }

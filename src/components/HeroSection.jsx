@@ -1,4 +1,8 @@
+import { useLanguage } from "../i18n/useLanguage";
+
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <header className="hero-section" id="hero">
       {/* SVG Filters — warped/liquid typography distortion */}
@@ -34,7 +38,7 @@ const HeroSection = () => {
           <span className="hero-name-line hero-name-top">LUCAS</span>
           <span className="hero-name-line hero-name-bottom">SANTOS</span>
         </h1>
-        <p className="hero-tagline">Desenvolvedor web.</p>
+        <p className="hero-tagline">{t.hero.tagline}</p>
       </div>
     </header>
   );
