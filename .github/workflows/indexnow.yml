@@ -1,0 +1,22 @@
+name: Notificar IndexNow
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar sinal para buscadores
+        run: |
+          curl -X POST "https://api.indexnow.org/IndexNow" \
+          -H "Content-Type: application/json; charset=utf-8" \
+          -d '{
+            "host": "lucasnsnt.ink",
+            "key": "nsnt-ink-123",
+            "keyLocation": "https://lucasnsnt.ink/nsnt-ink-123.txt",
+            "urlList": [
+              "https://lucasnsnt.ink/"
+            ]
+          }'
