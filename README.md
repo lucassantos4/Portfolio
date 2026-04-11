@@ -1,16 +1,19 @@
-# React + Vite
+# Portfólio Profissional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal desenvolvido para apresentar meu perfil como desenvolvedor web, destacando projetos, habilidades técnicas e formas de contato de maneira objetiva e profissional.
 
-Currently, two official plugins are available:
+O site foi construído com foco em uma apresentação clara da minha trajetória, reunindo seções sobre quem eu sou, experiências em projetos, principais competências e informações de contato.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O projeto conta com versão em português e inglês, layout responsivo e uma interface pensada para servir como vitrine profissional na web.
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- Vite
+- HTML
+- CSS
 
-## Expanding the ESLint configuration
+## Objetivo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Este portfólio foi criado para fortalecer minha presença profissional, centralizar meus principais trabalhos e apresentar minhas capacidades técnicas de forma acessível para recrutadores, empresas e parceiros.
