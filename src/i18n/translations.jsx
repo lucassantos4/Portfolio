@@ -1,3 +1,4 @@
+const currentYear = new Date().getFullYear();
 const translations = {
   pt: {
     nav: {
@@ -63,7 +64,7 @@ const translations = {
     contact: {
       title: "ENTRE EM CONTATO",
     },
-    footer: "© 2026 Lucas Santos — Desenvolvedor Web Full-Stack. Todos os direitos reservados.",
+    footer: `© ${currentYear} Lucas Santos. Todos os direitos reservados.`,
   },
 
   en: {
@@ -130,7 +131,7 @@ const translations = {
     contact: {
       title: "GET IN TOUCH",
     },
-    footer: "© 2026 Lucas Santos — Full-Stack Web Developer. All rights reserved.",
+    footer: `© ${currentYear} Lucas Santos. All rights reserved.`,
   },
 };
 
